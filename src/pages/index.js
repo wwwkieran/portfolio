@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import Layout from "../components/layout";
+import Seo from '../components/seo'
 
 const IndexPage = () => {
   return (
@@ -12,8 +12,6 @@ const IndexPage = () => {
   )
 }
 
-// You'll learn about this in the next task, just copy it for now
-export const Head = () => <title>Home Page</title>
+export const Head = () => <Seo title="Home Page" />
 
-// Step 3: Export your component
 export default IndexPage

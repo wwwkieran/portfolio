@@ -6,12 +6,13 @@ module.exports = {
     title: `Portfolio`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-mdx", "gatsby-plugin-sass", {
+  plugins: ["gatsby-plugin-mdx", "gatsby-plugin-sass",
+    {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      "name": "projects",
+      "path": "./src/pages/projects/"
     },
-    __key: "pages"
+    __key: "projects"
   }]
 };
