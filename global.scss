@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'ogg';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/title.woff') format("woff");
+}
+
+$content-max-width: 800px;
+$content-min-width: 300px;

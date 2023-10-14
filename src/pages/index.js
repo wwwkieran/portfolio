@@ -1,17 +1,17 @@
 import * as React from 'react'
-import Layout from "../components/layout";
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/layout'
+import ProjectList from "../components/projectList";
 import Seo from '../components/seo'
 
-const IndexPage = () => {
-  return (
-      <main>
-          <Layout pageTitle="Home Page">
-              <p>I'm making this by following the Gatsby Tutorial.</p>
-          </Layout>
-      </main>
-  )
+const BlogPage = ({ data }) => {
+    return (
+        <Layout pageTitle="My Blog Posts">
+            <ProjectList></ProjectList>
+        </Layout>
+    )
 }
 
-export const Head = () => <Seo title="Home Page" />
+export const Head = () => <Seo title="My Blog Posts" />
 
-export default IndexPage
+export default BlogPage
