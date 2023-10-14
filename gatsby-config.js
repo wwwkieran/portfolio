@@ -6,7 +6,7 @@ module.exports = {
     title: 'Portfolio',
     siteUrl: 'https://www.yourdomain.tld'
   },
-  plugins: ['gatsby-plugin-mdx', 'gatsby-plugin-sass', 'gatsby-plugin-image', 'gatsby-plugin-sharp',
+  plugins: ['gatsby-plugin-mdx', 'gatsby-plugin-sass', 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

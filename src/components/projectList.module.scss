@@ -1,36 +1,63 @@
 .project {
   width: 300px;
   text-align: right;
-  a {
+  margin: 0px;
+  padding: 0px;
+  h2 {
     color: gray;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: normal;
     font-family: Helvetica;
-
-
+    margin: 0px;
+    transition-property: left;
+    transition-duration: 1s;
   }
-
   &--selected {
     @extend .project;
-    a {
+    h2 {
       color: black;
-      text-decoration: none;
+
       font-weight: normal;
     }
   }
+  p {
+    transition-property: all;
+    transition-duration: 1s;
+  }
 }
+a {
+  text-decoration: none;
+}
+
 
 .container {
   display: flex;
+  margin: 0rem;
+  padding: 0px;
 
 }
 
 .list {
-
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .photoContainer {
   margin-left: 20px;
-  margin-top: 30px;
+  width: 500px;
+  height: 500px;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+  transition-property: visibility;
+  transition-duration: 1s;
+}
+
+.visible {
+  visibility: visible;
+  margin-top: auto;
+  margin-bottom: auto;
 }
