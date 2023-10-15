@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { project, projectSelected, container, list, photoContainer, hidden, visible } from './projectList.module.scss'
-import {GatsbyImage, StaticImage} from 'gatsby-plugin-image'
-import { getImage } from "gatsby-plugin-image"
+import { project, projectSelected, container, list, photoContainer, hidden, visible, projectDescInner } from './projectList.module.scss'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import autoAnimate from '@formkit/auto-animate'
 
 const ProjectList = () => {
   const data = useStaticQuery(graphql`
@@ -27,28 +27,30 @@ const ProjectList = () => {
         }
       }
     `)
-  const [selectedProject, setSelectedProject] = React.useState(data.allMdx.nodes[0].id)
-  const ref = React.useRef();
-  const [width, setWidth] = React.useState(0);
-  const [height, setHeight] = React.useState(0);
+  const [selectedProject, setSelectedProject] = React.useState('')
+  const parent = React.useRef(null)
 
   React.useEffect(() => {
-      if (ref.current) {
-          setWidth(ref.current.offsetWidth);
-          setHeight(ref.current.offsetHeight);
-      }
-  }, []);
+    parent.current && autoAnimate(parent.current)
+  }, [parent])
 
   return (
       <div className={container}>
         <div className={list}>{
                 data.allMdx.nodes.map(node => (
-                    <Link to={`/${node.frontmatter.slug}`} onMouseEnter={() => { setSelectedProject(node.id) }}>
+                    <Link to={`/${node.frontmatter.slug}`} onMouseEnter={() => { setSelectedProject(node.id) }} onMouseLeave={ () => { setSelectedProject('') }}>
                     <article key={node.id} className={node.id === selectedProject ? projectSelected : project}>
                         <h2>
                                 {node.frontmatter.title}
                         </h2>
-                        {node.id === selectedProject ? (<p>Posted: {node.frontmatter.date}</p>) : null}
+                        {node.id === selectedProject
+                          ? (
+                              <div className={projectDescInner}>
+                                  <p>{node.frontmatter.date}</p>
+                                  <p style={{ color: 'black' }}>{node.frontmatter.short_description}</p>
+                              </div>
+                            )
+                          : null}
                     </article>
                     </Link>
                 ))
