@@ -47,3 +47,13 @@ a {
   width: 45vw;
   height: auto !important;
 }
+
+@media (max-width: 768px) {
+  .heroContainer {
+    visibility: hidden;
+  }
+
+  .project {
+    width: 100%;
+  }
+}
