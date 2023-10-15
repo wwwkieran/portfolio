@@ -1,5 +1,27 @@
-@use "../../global";
+.project {
+  width: 30vw;
+  text-align: right;
+  margin: 0px;
+  padding: 5px;
+  h2 {
+    color: gray;
+    text-decoration: none;
+    font-size: max(min(5vh, 4rem), 2rem);
+    font-weight: normal;
+    font-family: Helvetica;
+    margin: 0px;
+    transition-property: color;
+    transition-duration: 0.5s;
+  }
+  &--selected {
+    @extend .project;
+    h2 {
+      color: black;
 
+      font-weight: normal;
+    }
+  }
+}
 a {
   text-decoration: none;
 }
@@ -19,13 +41,11 @@ a {
 }
 
 .photoContainer {
-  margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
   margin-top: auto;
-  min-width: 300px;
-  width: 20vw;
-  height: 20vw;
+  width: 45vw;
+  height: 30vw;
 }
 
 .hidden {
@@ -41,3 +61,13 @@ a {
   margin-bottom: auto;
 }
 
+.projectDescInner {
+  margin: 0px;
+  margin-bottom: 5px;
+  p {
+    color: gray;
+    font-size: max(min(2.5vh, 1.5rem), 1rem);
+    margin: 2px;
+
+  }
+}

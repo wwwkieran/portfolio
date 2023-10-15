@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { container, list, photoContainer, hidden, visible, projectDescInner } from './projectList.module.scss'
+import { project, projectSelected, container, list, photoContainer, hidden, visible, projectDescInner } from './projectList.module.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import ProjectArticle from './projectArticle'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
+import ProjectHero from './projectHero'
 
 const ProjectList = () => {
   const data = useStaticQuery(graphql`
@@ -28,20 +29,29 @@ const ProjectList = () => {
       }
     `)
   const [selectedProject, setSelectedProject] = React.useState('')
+  const [parent, enableAnimations] = useAutoAnimate(/* optional config */)
 
   return (
-      <div className={container}>
+      <div className={container} onMouseLeave={() => { setSelectedProject('') } }>
         <div className={list}>{
                 data.allMdx.nodes.map(node => (
-                    <ProjectArticle
-                        node={node}
-                        selectedProject={selectedProject}
-                        onMouseEnter={ () => { setSelectedProject(node.id) }}
-                        onMouseLeave={ () => { setSelectedProject('') }}
-                    />
+                    <Link to={`/${node.frontmatter.slug}`} onMouseEnter={() => { setSelectedProject(node.id) } }>
+                    <article className={node.id === selectedProject ? projectSelected : project}>
+                        <h2 key={node.id}>
+                                {node.frontmatter.title}
+                        </h2>
+                    </article>
+                    </Link>
                 ))
             }
         </div>
+        <div className={photoContainer} ref={parent}>{
+            data.allMdx.nodes.map(node => (
+              node.id === selectedProject && (<ProjectHero node={node}/>)
+            ))
+        }
+        </div>
+
       </div>
   )
 }

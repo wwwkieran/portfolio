@@ -14,5 +14,15 @@ module.exports = {
         path: './src/pages/projects/'
       },
       __key: 'projects'
+    },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'victor mono',
+          'Noto Serif Display:200'
+        ],
+        display: 'swap'
+      }
     }]
 }
