@@ -1,27 +1,5 @@
-.project {
-  width: 30vw;
-  text-align: right;
-  margin: 0px;
-  padding: 5px;
-  h2 {
-    color: gray;
-    text-decoration: none;
-    font-size: max(min(5vh, 4rem), 2rem);
-    font-weight: normal;
-    font-family: Helvetica;
-    margin: 0px;
-    transition-property: left;
-    transition-duration: 1s;
-  }
-  &--selected {
-    @extend .project;
-    h2 {
-      color: black;
+@use "../../global";
 
-      font-weight: normal;
-    }
-  }
-}
 a {
   text-decoration: none;
 }
@@ -63,13 +41,3 @@ a {
   margin-bottom: auto;
 }
 
-.projectDescInner {
-  margin: 0px;
-  margin-bottom: 5px;
-  p {
-    color: gray;
-    font-size: max(min(2.5vh, 1.5rem), 1rem);
-    margin: 2px;
-
-  }
-}

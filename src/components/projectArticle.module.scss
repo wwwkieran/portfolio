@@ -1,0 +1,50 @@
+@use "../../global";
+
+.project {
+
+  text-align: right;
+  margin: 0px;
+  padding: 5px;
+  h2 {
+    width: 30vw;
+    color: gray;
+    text-decoration: none;
+    font-size: max(min(5vh, 4rem), 2rem);
+    font-weight: normal;
+    font-family: Helvetica;
+    margin: 0px;
+    transition-property: color;
+    transition-duration: 0.25s;
+    &:active {
+      color: global.$accent-color;
+    }
+  }
+  &--selected {
+    @extend .project;
+    h2 {
+      color: black;
+      font-weight: normal;
+    }
+  }
+}
+
+.projectDescInnerLeft {
+  width: 30vw;
+  margin: 0px;
+  margin-bottom: 5px;
+  p {
+    color: gray;
+    font-size: max(min(2.5vh, 1.5rem), 1rem);
+    margin: 2px;
+
+  }
+}
+
+.projectDescInnerRight {
+  margin-left: 30px;
+
+}
+
+.projectDescInner {
+  display: flex;
+}

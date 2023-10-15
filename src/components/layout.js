@@ -5,7 +5,8 @@ import {
   navLinks,
   navLinkItem,
   navLinkText,
-  siteTitle
+  siteTitle,
+    name
 } from './layout.module.scss'
 
 const Layout = ({ pageTitle, children }) => {
@@ -13,7 +14,7 @@ const Layout = ({ pageTitle, children }) => {
         <div className={container}>
             <header className={siteTitle}>
                 <h1 style={{ marginTop: 'auto' }}> {pageTitle} </h1>
-               <h1 style={{ color: 'lightgray', marginTop: 'auto', marginLeft: 'auto', textAlign: 'right' }}>Kieran <br></br> Sagar <br></br> Parikh </h1>
+               <h1 className={name}> <Link to="/">Kieran <br></br> Sagar <br></br> Parikh </Link></h1>
                 {/* <br></br> */}
             {/*    <nav> */}
             {/*    <ul className={navLinks}> */}

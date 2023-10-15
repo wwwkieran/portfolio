@@ -71,3 +71,22 @@ h1{
   padding-bottom: 2vh;
 }
 
+.name {
+  color: lightgray;
+  transition-property: color;
+  transition-duration: 0.25s;
+  &:hover {
+    color: black;
+  }
+  &:active {
+    color: global.$accent-color;
+  }
+  margin-top: auto;
+  margin-left: auto;
+  text-align: right;
+  a {
+    all: unset;
+
+  }
+}
+
