@@ -44,8 +44,8 @@ h6 {
   margin-top: auto;
   margin-bottom: 0px;
   margin-left: auto;
-  height: 40vh;
-  width: 30vw;
+  height: min(50vh / 1.5, 50vw / 1.5);
+  width: min(40vh / 1.5, 40vw / 1.5);
 }
 
 .imageContainer {
