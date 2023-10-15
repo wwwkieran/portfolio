@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { project, projectSelected, container, list, photoContainer, hidden, visible, projectDescInner } from './projectList.module.scss'
+import { project, projectSelected, container, list, heroContainer, hidden, visible, projectDescInner } from './projectList.module.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 import ProjectHero from './projectHero'
@@ -32,7 +32,8 @@ const ProjectList = () => {
   const [parent, enableAnimations] = useAutoAnimate(/* optional config */)
 
   return (
-      <div className={container} onMouseLeave={() => { setSelectedProject('') } }>
+      // onMouseLeave={() => { setSelectedProject('') }
+      <div className={container} >
         <div className={list}>{
                 data.allMdx.nodes.map(node => (
                     <Link to={`/${node.frontmatter.slug}`} onMouseEnter={() => { setSelectedProject(node.id) } }>
@@ -45,9 +46,9 @@ const ProjectList = () => {
                 ))
             }
         </div>
-        <div className={photoContainer} ref={parent}>{
+        <div className={heroContainer} ref={parent}>{
             data.allMdx.nodes.map(node => (
-              node.id === selectedProject && (<ProjectHero node={node}/>)
+              node.id === selectedProject && (<ProjectHero key={node.id} node={node}/>)
             ))
         }
         </div>

@@ -32,42 +32,18 @@ a {
   margin-top: 0px;
   padding-top: 2vh;
   padding: 0px;
+  height: 100%
 
 }
 
 .list {
-  margin-top: auto;
   margin-bottom: auto;
 }
 
-.photoContainer {
+.heroContainer {
   margin-right: auto;
-  margin-bottom: auto;
-  margin-top: auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
   width: 45vw;
-  height: 30vw;
-}
-
-.hidden {
-  visibility: hidden;
-  display: none;
-  transition-property: visibility;
-  transition-duration: 1s;
-}
-
-.visible {
-  visibility: visible;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.projectDescInner {
-  margin: 0px;
-  margin-bottom: 5px;
-  p {
-    color: gray;
-    font-size: max(min(2.5vh, 1.5rem), 1rem);
-    margin: 2px;
-
-  }
+  height: auto !important;
 }

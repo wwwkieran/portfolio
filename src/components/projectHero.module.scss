@@ -1,14 +1,15 @@
 @use "../../global";
 
 .container {
-  margin-left: 0px;
+  margin-left: auto;
   padding: 0px;
+  height: 100%;
+  width: 35vw;
+
 }
 
 .textContainer {
-  width: 70vw;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-right: 10vw;
 }
 
 .metadataContainer {
@@ -39,15 +40,20 @@ h6 {
 }
 
 .image {
-  margin-left: auto;
+
   margin-top: auto;
-  width: 10%;
-  height: 10%;
+  margin-bottom: 0px;
+  margin-left: auto;
+  height: 40vh;
+  width: 30vw;
 }
 
 .imageContainer {
-display: flex;
 
+  display: flex;
+  margin-top: auto;
+  margin-left: auto;
+  height: 100%;
 }
 
 .seemoreText {

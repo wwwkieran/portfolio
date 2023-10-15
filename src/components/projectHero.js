@@ -11,15 +11,17 @@ const ProjectHero = ({ node }) => {
 
   return (
         <div className={container}>
+            <div className={textContainer}>
             <div className={metadataContainer}>
             <h6 style={{ marginRight: 'auto' }}>{node.frontmatter.date}</h6>
             <h6 style={{ marginLeft: 'auto' }}>{node.frontmatter.date}</h6>
             </div>
             <p className={description}>{node.frontmatter.short_description}</p>
-            <div style={{ display: 'flex'}}>
-            <Link to={`/${node.frontmatter.slug}`} className={seemoreText}>See More --> </Link>
+            <div style={{ display: 'flex' }}>
+            {/* <Link to={`/${node.frontmatter.slug}`} className={seemoreText}>See More --> </Link> */}
             </div>
-            {/*<hr/>*/}
+            </div>
+            {/* <hr/> */}
             <div className={imageContainer}>
                 <GatsbyImage className={image} alt={node.frontmatter.hero_image_alt} image={getImage(node.frontmatter.hero_image)} />
             </div>
