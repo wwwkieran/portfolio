@@ -2,6 +2,10 @@ $content-max-width: 85vw;
 $content-min-width: 0px;
 $accent-color: #391eda;
 
+@font-face {
+  font-family: "Charcoal";
+  src: url('/fonts/CHARCOAL.TTF') format('truetype');
+}
 
 h1{
   color: black;

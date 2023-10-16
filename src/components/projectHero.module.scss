@@ -10,21 +10,22 @@
 
 .textContainer {
   position: sticky;
-  top: 0px;
+  top: 15px;
   margin-right: 10vw;
 }
 
 .metadataContainer {
   display: flex;
   margin: 0px;
-  padding: 0px;
+  padding: 10px;
+  padding-bottom: 0px;
 
 }
 
 .description {
   margin:  0px;
-  padding: 0px;
-  padding-bottom: 5px;
+  padding: 10px;
+  padding-bottom: 20px;
 }
 
 .image {

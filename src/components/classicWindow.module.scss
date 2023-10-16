@@ -1,0 +1,187 @@
+@supports (-webkit-touch-callout: none) {
+  body {
+    /*noinspection CssInvalidPropertyValue*/
+    height: -webkit-fill-available;
+  }
+}
+
+
+.window {
+  //position: absolute;
+  //top: 100px;
+  //left: 100px;
+  width: auto;
+  height: 95%;
+  background: #CCCCCC;
+  box-shadow:
+          1px 1px 0 0px #ffffff inset,
+          -1px -1px 0 0px #AAAAAA inset,
+          0 0 0 1px #000000,
+          2px 2px 0 0px #000000;
+  transform-origin: center;
+}
+
+.windowHeader {
+  font-family: Charcoal, Geneva, sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  justify-content: center;
+  height: 24px;
+}
+
+.windowHeaderSpacer {
+  width: 100%;
+  box-shadow:
+          0px 1px 0px 0px #ffffff inset,
+          0px 2px 0 0px #777777 inset,
+          0px 3px 0px 0px #ffffff inset,
+          0px 4px 0 0px #777777 inset,
+          0px 5px 0px 0px #ffffff inset,
+          0px 6px 0 0px #777777 inset,
+          0px 7px 0px 0px #ffffff inset,
+          0px 8px 0 0px #777777 inset,
+          0px 9px 0px 0px #ffffff inset,
+          0px 10px 0 0px #777777 inset,
+          0px 11px 0px 0px #ffffff inset,
+          0px 12px 0 0px #777777 inset;
+  margin: 5px 0px;
+
+}
+
+.windowHeaderText {
+  flex-shrink: 0;
+  padding: 0px;
+  margin-top: 3px;
+  font-size: 0.9em;
+  margin-right: 3px;
+}
+
+.windowHeaderIcon {
+  height: 1em;
+  padding: 0px;
+  margin-left: 4px;
+  margin-right: 2px;
+  margin-top: 4px;
+}
+
+.windowContent {
+  background: white;
+  //width: 350px;
+  max-height: 90vh;
+  height: auto;
+  margin: 6px;
+  margin-top: 0px;
+  box-shadow:
+          1px 1px 0 0px #ffffff inset,
+          0 0 0 1px #000000,
+          -1px 0px 0 1px #888888,
+          -1px -1px 0 1px #888888,
+          0px -1px 0 1px #888888,
+          1px 0px 0 1px #ffffff,
+          1px 1px 0 1px #ffffff,
+          0px 1px 0 1px #ffffff;
+  overflow-y: auto;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: Charcoal, Geneva, sans-serif;
+}
+
+.link {
+  margin: 0px;
+  padding-top: 10px
+}
+
+.linkDesc {
+  margin: 0px;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+.windowHeaderButton {
+  all: unset;
+  width: 10px;
+  height: 11px;
+  display: inline;
+  background-image: linear-gradient(to bottom right, #999999, #ffffff);
+  margin: 6px;
+  flex: 0 0 11px;
+  box-shadow:
+          1px 1px 0 0px #CCCCCC inset,
+          -1px -1px 0 0px #888888 inset,
+          0 0 0 1px #000000,
+          -1px 0px 0 1px #888888,
+          -1px -1px 0 1px #888888,
+          0px -1px 0 1px #888888,
+          1px 0px 0 1px #ffffff,
+          1px 1px 0 1px #ffffff,
+          0px 1px 0 1px #ffffff;
+}
+
+.windowHeaderButton:active {
+  background-image: linear-gradient(to bottom right, #444444, #888888);
+  box-shadow:
+          0 0 0 1px #000000,
+          -1px 0px 0 1px #888888,
+          -1px -1px 0 1px #888888,
+          0px -1px 0 1px #888888,
+          1px 0px 0 1px #ffffff,
+          1px 1px 0 1px #ffffff,
+          0px 1px 0 1px #ffffff;
+}
+
+#minimizeButton {
+  margin-left: 4px;
+}
+
+#resizeButton {
+  margin-right: 4px;
+}
+
+img {
+  width: inherit;
+  height: 35px;
+  padding-left: 3px;
+}
+
+.contentLinkGroup{
+  all: unset;
+  width: auto;
+  display: inline;
+  padding: 10px;
+  text-align: center;
+  margin:auto;
+}
+
+.contentLinkGroup:active > img {
+  color: #ffffff;
+  filter: brightness(0.4);
+}
+
+.contentLinkGroup:active > .contentLinkDescription {
+  color: #ffffff;
+  background: #262626;
+}
+
+.contentLinkDescription {
+  margin: 0;
+  padding: 2px;
+  background: inherit;
+  font-family: Geneva, sans-serif;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+  font-size: 0.8em;
+}
+
+.contentParagraph {
+  all: unset;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 5px;
+}
+

@@ -4,9 +4,9 @@ export const onRenderBody = ({ setHeadComponents }) => {
     setHeadComponents([
         <link
             rel="preload"
-            href="/fonts/title.woff"
+            href="/fonts/CHARCOAL.TTF"
             as="font"
-            type="font/woff"
+            type="font/truetype"
             crossOrigin="anonymous"
             key="interFont"
         />,
