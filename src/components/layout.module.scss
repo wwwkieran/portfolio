@@ -2,15 +2,15 @@
 @use "transition";
 
 .container {
+  @extend .ld, .ld-blur-in;
+  padding-top: 2vh;
+
   margin: auto;
   max-width: global.$content-max-width;
   min-width: global.$content-min-width;
   font-family: sans-serif;
 }
 
-.heading {
-  color: rebeccapurple;
-}
 
 .site-title {
 
@@ -19,26 +19,8 @@
   color: black;
   font-weight: 700;
   margin: 0rem 0rem 0rem 0;
-  line-height: 5vh;
-  white-space: pre-line;
   display: flex;
-  //h1 {
-  //  font-size: 1.3rem;
-  //  font-family: ogg;
-  //  text-align: left;
-  //
-  //}
 
-  h2 {
-    @extend .ld;
-    animation: ld-spring-ltr-in 1s 1 linear; animation-fill-mode: forwards;transform: matrix(1,0,0,1,-49.5,0);
-    font-size: 2rem;
-    text-align: right;
-    margin-left: auto;
-    margin-top: auto;
-    align-self: flex-end;
-    display: block;
-  }
 
   nav {
     font-size: 1rem;
@@ -65,25 +47,20 @@
 
 }
 
-h1{
-  color: black;
-  text-decoration: none;
-  font-size: max(min(5vh, 4rem), 2rem);
-  font-weight: normal;
-  font-family: Helvetica;
-  padding-top: 2vh;
-  margin-top: 0px;
-  padding-bottom: 2vh;
-}
+
 
 .name {
+
   color: lightgray;
+  line-height: 95%;
   transition-property: color;
   transition-duration: 0.25s;
   &:hover {
+
     color: black;
   }
   &:active {
+
     color: global.$accent-color;
   }
   margin-top: auto;

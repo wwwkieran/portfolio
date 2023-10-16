@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: 'Portfolio',
-    siteUrl: 'https://www.yourdomain.tld'
+    title: 'Kieran Sagar Parikh',
+    siteUrl: 'https://parikh.ca'
   },
   plugins: ['gatsby-plugin-mdx', 'gatsby-plugin-sass', 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp',
     {

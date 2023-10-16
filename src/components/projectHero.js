@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { project, projectSelected, projectDescInner, projectDescInnerRight, projectDescInnerLeft } from './projectArticle.module.scss'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { container, metadataContainer, description, image, imageContainer, seemoreText, textContainer } from './projectHero.module.scss'
@@ -16,7 +15,7 @@ const ProjectHero = ({ node }) => {
             <h6 style={{ marginRight: 'auto' }}>{node.frontmatter.date}</h6>
             <h6 style={{ marginLeft: 'auto' }}>{node.frontmatter.date}</h6>
             </div>
-            <p className={description}>{node.frontmatter.short_description}</p>
+            <h3 className={description}>{node.frontmatter.short_description}</h3>
             <div style={{ display: 'flex' }}>
             {/* <Link to={`/${node.frontmatter.slug}`} className={seemoreText}>See More --> </Link> */}
             </div>
