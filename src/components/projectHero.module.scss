@@ -9,6 +9,8 @@
 }
 
 .textContainer {
+  position: sticky;
+  top: 0px;
   margin-right: 10vw;
 }
 
@@ -26,11 +28,13 @@
 }
 
 .image {
+  position: sticky;
+  bottom: 0px;
   margin-top: auto;
   margin-bottom: 0px;
   margin-left: auto;
-  height: min(50vh / 1.5, 50vw / 1.5);
-  width: min(40vh / 1.5, 40vw / 1.5);
+  height: min(50vh / 1.3, 50vw / 1.3);
+  width: min(40vh / 1.3, 40vw / 1.3);
 }
 
 .imageContainer {

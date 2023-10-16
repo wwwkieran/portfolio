@@ -32,10 +32,10 @@ const ProjectList = () => {
 
   return (
       //
-      <div className={container} >
+      <div className={container} onMouseLeave={() => { setSelectedProject('') }}>
         <div className={list}>{
                 data.allMdx.nodes.map(node => (
-                    <Link to={`/${node.frontmatter.slug}`} onMouseEnter={() => { setSelectedProject(node.id) } } onMouseLeave={() => { setSelectedProject('') }}>
+                    <Link to={`/${node.frontmatter.slug}`} onMouseEnter={() => { setSelectedProject(node.id) } } >
                     <article className={node.id === selectedProject ? projectSelected : project}>
                         <h1 key={node.id}>
                                 {node.frontmatter.title}

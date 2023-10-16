@@ -11,11 +11,15 @@
     transition-duration: 0.5s;
     line-height: 95%;
     margin-bottom: 5px;
+    &:active {
+      color: black;
+    }
   }
   &--selected {
     @extend .project;
     h1 {
-      color: black;
+      color: global.$accent-color;
+
     }
   }
 }
