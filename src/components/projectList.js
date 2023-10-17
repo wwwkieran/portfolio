@@ -31,8 +31,10 @@ const ProjectList = () => {
   const [parent, enableAnimations] = useAutoAnimate(/* optional config */)
 
   return (
-      //
-      <div className={container} onMouseLeave={() => { setSelectedProject('') }}>
+
+      <div className={container} onMouseLeave={() => {
+          setSelectedProject('')
+      }}>
         <div className={list}>{
                 data.allMdx.nodes.map(node => (
                     <Link to={`/${node.frontmatter.slug}`} onMouseEnter={() => { setSelectedProject(node.id) } } >
