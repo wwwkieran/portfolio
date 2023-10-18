@@ -6,7 +6,7 @@ module.exports = {
     title: 'Kieran Sagar Parikh',
     siteUrl: 'https://parikh.ca'
   },
-  plugins: ['gatsby-plugin-mdx', 'gatsby-plugin-sass', 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp',
+  plugins: [ 'gatsby-plugin-sass', 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -24,5 +24,26 @@ module.exports = {
         ],
         display: 'swap'
       }
-    }]
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
+          // {
+          //   resolve: `gatsby-remark-table-of-contents`,
+          //   options: {
+          //     exclude: "Table of Contents",
+          //     tight: false,
+          //     ordered: false,
+          //     fromHeading: 1,
+          //     toHeading: 6,
+          //     className: "table-of-contents"
+          //   },
+          // },
+        ],
+      },
+    },
+  ]
 }

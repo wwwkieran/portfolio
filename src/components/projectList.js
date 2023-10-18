@@ -10,7 +10,7 @@ const ProjectList = () => {
         allMdx(sort: { frontmatter: { date: DESC }}) {
           nodes {
             frontmatter {
-              date(formatString: "MMMM D, YYYY")
+              date
               title
               slug
               short_description

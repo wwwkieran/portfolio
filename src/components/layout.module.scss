@@ -71,3 +71,16 @@
   }
 }
 
+.backButton {
+  color: lightgray;
+  transition-property: color;
+  transition-duration: 0.25s;
+  transition-property: margin-left;
+  transition-duration: 0.5s;
+  &:hover {
+    color: gray;
+    //margin-left: -10px;
+
+  }
+}
+
