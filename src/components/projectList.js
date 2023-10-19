@@ -37,7 +37,7 @@ const ProjectList = () => {
       }}>
         <div className={list}>{
                 data.allMdx.nodes.map(node => (
-                    <Link to={`/${node.frontmatter.slug}`} onMouseEnter={() => { setSelectedProject(node.id) } } >
+                    <Link to={`/${node.frontmatter.slug}`} style={{textDecoration: "none"}} onMouseEnter={() => { setSelectedProject(node.id) } } >
                     <article className={node.id === selectedProject ? projectSelected : project}>
                         <h1 key={node.id}>
                                 {node.frontmatter.title}
