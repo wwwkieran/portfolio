@@ -7,7 +7,7 @@ import ProjectHero from './projectHero'
 const ProjectList = () => {
   const data = useStaticQuery(graphql`
       query {
-        allMdx(sort: { frontmatter: { date: DESC }}) {
+      allMdx (sort: { frontmatter: { index: ASC }}) {
           nodes {
             frontmatter {
               date
@@ -33,7 +33,7 @@ const ProjectList = () => {
   return (
 
       <div className={container} onMouseLeave={() => {
-          setSelectedProject('')
+        setSelectedProject('')
       }}>
         <div className={list}>{
                 data.allMdx.nodes.map(node => (

@@ -6,7 +6,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { PropTypes } from 'prop-types'
 
 // eslint-disable-next-line react/prop-types
-const Post = ({ frontmatter, children }) => {
+const Post = ({ frontmatter, prev, next, children }) => {
   return (
         <div className={container}>
             <div className={ headerContainer }>
@@ -31,6 +31,14 @@ const Post = ({ frontmatter, children }) => {
             >
                 {children}
             </MDXProvider>
+            <div className={ flexContainer }>
+                <div style={{ marginRight: 'auto' }}>
+                    {prev && <Link to={`/${prev.frontmatter.slug}`}> <h6>← Previous Project</h6> <h6>{prev.frontmatter.title}</h6> </Link>}
+                </div>
+                <div style={{ textAlign: 'right' }}>
+                    {next && <Link to={`/${next.frontmatter.slug}`}>Next Project → <h6>{next.frontmatter.title}</h6> </Link>}
+                </div>
+            </div>
         </div>
   )
 }
