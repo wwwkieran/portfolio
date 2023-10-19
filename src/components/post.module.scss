@@ -1,3 +1,76 @@
+@use "../../global";
+
 .container {
-  width: 80%;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+}
+
+.metadataContainer {
+  width: 30%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.metadataElement {
+  display: flex;
+}
+
+.metadataLabel {
+  color: global.$accent-color;
+}
+
+.metadataSpacer {
+  min-width: 10px;
+}
+
+.metadataValue {
+  text-align: right;
+}
+
+.descriptionContainer {
+  width: 70%;
+  margin-left: 10px
+}
+
+h4 {
+  margin-bottom: 5px;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.contentContainer {
+  margin: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  img {
+    width: 10%;
+  }
+
+}
+
+.halfWidth {
+  @extend .contentContainer;
+  width: 50%;
+}
+
+.thirdWidth {
+  @extend .contentContainer;
+  width: 33%;
+}
+
+.twoThirdsWidth {
+  @extend .contentContainer;
+  width: 66%;
 }
