@@ -7,6 +7,8 @@ import { PropTypes } from 'prop-types'
 
 // eslint-disable-next-line react/prop-types
 const Post = ({ frontmatter, prev, next, children }) => {
+    if (!frontmatter) return null
+
   return (
         <div className={container}>
             <div className={ headerContainer }>
@@ -26,7 +28,6 @@ const Post = ({ frontmatter, prev, next, children }) => {
                   ThirdWidth,
                   TwoThirdsWidth,
                   FlexContainer
-
                 }}
             >
                 {children}
@@ -53,7 +54,7 @@ const MetadataElement = ({ label, children }) => {
                         </div>)
 }
 
-const FlexContainer = ({ children }) => {
+export const FlexContainer = ({ children }) => {
   return (
         <div className={ flexContainer }>
             {children}
@@ -64,7 +65,7 @@ FlexContainer.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-const HalfWidth = ({ children }) => {
+export const HalfWidth = ({ children }) => {
   return (
         <div className={ halfWidth }>
             {children}
@@ -75,7 +76,7 @@ HalfWidth.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-const ThirdWidth = ({ children }) => {
+export const ThirdWidth = ({ children }) => {
   return (
         <div className={ thirdWidth }>
             {children}
