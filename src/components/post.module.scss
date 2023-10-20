@@ -46,6 +46,7 @@ h4 {
 
 .flexContainer {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contentContainer {
@@ -78,5 +79,42 @@ h4 {
   }
   h6 {
     color: black;
+  }
+}
+
+// tablets
+@media only screen and (max-width: 64em) {
+  .twoThirdsWidth {
+    min-width: 100%;
+  }
+  .thirdWidth {
+    min-width: 100%;
+  }
+  .halfWidth {
+    min-width: 100%;
+  }
+}
+
+// phones
+@media only screen and (max-width: 48em) {
+  .thirdWidth {
+    min-width: 100%;
+  }
+
+  .halfWidth {
+    min-width: 100%;
+  }
+
+  .descriptionContainer {
+    min-width: 100%;
+    margin: auto;
+  }
+
+  .metadataContainer {
+    min-width: 100%;
+  }
+
+  .headerContainer {
+    flex-wrap: wrap;
   }
 }
