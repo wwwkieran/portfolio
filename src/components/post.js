@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { container, headerContainer, metadataContainer, descriptionContainer, metadataElement, metadataLabel, metadataValue, metadataSpacer, flexContainer, halfWidth, thirdWidth, twoThirdsWidth } from './post.module.scss'
+import { container, headerContainer, metadataContainer, descriptionContainer, metadataElement, metadataLabel, metadataValue, metadataSpacer, flexContainer, halfWidth, thirdWidth, twoThirdsWidth, nextPrevProjectDiv } from './post.module.scss'
 import ClassicWindow from './classicWindow'
 import { MDXProvider } from '@mdx-js/react'
 import { PropTypes } from 'prop-types'
@@ -32,11 +32,11 @@ const Post = ({ frontmatter, prev, next, children }) => {
                 {children}
             </MDXProvider>
             <div className={ flexContainer }>
-                <div style={{ marginRight: 'auto' }}>
-                    {prev && <Link to={`/${prev.frontmatter.slug}`}> <h6>← Previous Project</h6> <h6>{prev.frontmatter.title}</h6> </Link>}
+                <div className={nextPrevProjectDiv} style={{ marginRight: 'auto' }}>
+                    {prev && <Link to={`/${prev.frontmatter.slug}`}> <p>← Previous Project</p> <h6>{prev.frontmatter.title}</h6> </Link>}
                 </div>
-                <div style={{ textAlign: 'right' }}>
-                    {next && <Link to={`/${next.frontmatter.slug}`}>Next Project → <h6>{next.frontmatter.title}</h6> </Link>}
+                <div className={nextPrevProjectDiv} style={{ textAlign: 'right' }}>
+                    {next && <Link to={`/${next.frontmatter.slug}`}> <p> Next Project → </p> <h6>{next.frontmatter.title}</h6> </Link>}
                 </div>
             </div>
         </div>

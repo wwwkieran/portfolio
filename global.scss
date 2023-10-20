@@ -72,6 +72,9 @@ a {
   text-decoration: black;
   text-decoration-line: underline;
   text-decoration-style: dotted;
+  &:active {
+    color: black;
+  }
 }
 
 /* Small devices such as large phones (640px and up) */
