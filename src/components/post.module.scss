@@ -47,6 +47,7 @@ h4 {
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
+  padding: 15px;
 }
 
 .contentContainer {
@@ -55,7 +56,6 @@ h4 {
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .halfWidth {

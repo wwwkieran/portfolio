@@ -7,7 +7,7 @@ import { PropTypes } from 'prop-types'
 
 // eslint-disable-next-line react/prop-types
 const Post = ({ frontmatter, prev, next, children }) => {
-    if (!frontmatter) return null
+  if (!frontmatter) return null
 
   return (
         <div className={container}>
@@ -87,7 +87,7 @@ ThirdWidth.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-const TwoThirdsWidth = ({ children }) => {
+export const TwoThirdsWidth = ({ children }) => {
   return (
         <div className={ twoThirdsWidth }>
             {children}
