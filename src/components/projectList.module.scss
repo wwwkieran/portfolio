@@ -15,11 +15,24 @@
       color: black;
     }
   }
+  h6 {
+    color: gray;
+    transition-property: color;
+    transition-duration: 0.5s;
+    line-height: 95%;
+    margin: 0px;
+    display: inline;
+    &:active {
+      color: global.$accent-color;
+    }
+  }
   &--selected {
     @extend .project;
     h1 {
       color: global.$accent-color;
-
+    }
+    h6 {
+      color: black;
     }
   }
 }

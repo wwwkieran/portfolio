@@ -13,6 +13,7 @@ const ProjectList = () => {
               date
               title
               slug
+              index
               short_description
               hero_image_alt
               hero_image {
@@ -39,6 +40,9 @@ const ProjectList = () => {
                 data.allMdx.nodes.map(node => (
                     <Link to={`/${node.frontmatter.slug}`} style={{textDecoration: "none"}} onMouseEnter={() => { setSelectedProject(node.id) } } >
                     <article className={node.id === selectedProject ? projectSelected : project}>
+                        <h6>
+                            {node.frontmatter.index}
+                        </h6>
                         <h1 key={node.id}>
                                 {node.frontmatter.title}
                         </h1>
