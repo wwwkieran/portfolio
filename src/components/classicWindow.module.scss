@@ -139,8 +139,20 @@
   margin-left: 4px;
 }
 
+.minimizeButtonInternalOne {
+  border:none; border-top: 1px solid black; margin-top: 0px; box-shadow: none;
+}
+
+.minimizeButtonInternalTwo {
+  border:none; border-top: 1px solid black; margin-top: 1px; box-shadow: none;
+}
+
 #resizeButton {
   margin-right: 4px;
+}
+
+.resizeButtonInternal {
+  border:none; border-right: 1px solid black; border-bottom: 1px solid black; margin-top: -5px; box-shadow: none; width:6px; height: 6px;
 }
 
 img {
