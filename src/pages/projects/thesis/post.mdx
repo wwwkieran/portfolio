@@ -11,7 +11,7 @@ link: "https://cs.middlebury.edu"
 role: ""
 index: 6
 ---
-import {FlexContainer, HalfWidth, ThirdWidth } from '../../../components/post'
+import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth } from '../../../components/post'
 
 #### Introduction
 
@@ -47,36 +47,56 @@ that appear as if they came from the training dataset. While today AI image gene
 
 #### Datasets
 <FlexContainer>
-    <ThirdWidth>
+    <HalfWidth>
         The simplest way to influence the output images is by curating the images in the dataset used to train the model.
 
-        I conducted my experiments on two different datasets: Impressionist and Abstract Impressionist.  I created these datasets by downloading real artworks with specific style tags from WikiArt, a free online visual encyclopedia.
-    </ThirdWidth>
-    <HalfWidth>
-        ![output size diagram](./output-size.jpg)
+        I conducted my experiments on two different datasets: Impressionist and Abstract Expressionist.  I created these datasets by downloading real artworks with specific style tags from WikiArt, a free online visual encyclopedia.
     </HalfWidth>
+    <ThirdWidth>
+
+    </ThirdWidth>
 </FlexContainer>
 
 ##### Impressionist
 <FlexContainer>
     <ThirdWidth>
-        3,684 works of 19th century European painting, including:
+        3,684 works of 19th century Impressionist painting, including:
 
     </ThirdWidth>
     <ThirdWidth>
-        ![output size diagram](./output-size.jpg)
+        ![Garden in Grez](./imp-sample/garden-in-grez.jpg "Garden in Grez, 1883, Carl Larsson")
     </ThirdWidth>
 </FlexContainer>
 
 <FlexContainer>
     <ThirdWidth>
-        ![output size diagram](./output-size.jpg)
+        ![La Gare Saint-Lazare](./imp-sample/gare-st-lazare.jpg "La Gare Saint-Lazare, 1877, Claude Monet")
     </ThirdWidth>
     <ThirdWidth>
-        ![output size diagram](./output-size.jpg)
+        ![The Railway](./imp-sample/railway.jpg "The Railway, 1873, Edouard Manet")
     </ThirdWidth>
     <ThirdWidth>
-        ![output size diagram](./output-size.jpg)
+        ![The Grands Boulevards](./imp-sample/the-great-boulevards-1875.jpg "The Grands Boulevards, 1875, Pierre-Auguste Renoir")
+    </ThirdWidth>
+</FlexContainer>
+
+##### Abstract Expressionist
+<FlexContainer>
+    <ThirdWidth>
+        3,284 works of 20th century American abstract painting, including:
+
+    </ThirdWidth>
+    <ThirdWidth>
+        ![Number 5](./abex-sample/No._5,_1948.jpg "Number 5, 1948, Jackson Pollock")
+    </ThirdWidth>
+</FlexContainer>
+
+<FlexContainer>
+    <ThirdWidth>
+        ![Blue, Orange, Red](./abex-sample/blue-orange-red.jpg!Large.jpg "Blue, Orange, Red, 1961, Mark Rothko")
+    </ThirdWidth>
+    <ThirdWidth>
+        ![Autumn Sky](./abex-sample/abstract-expressionist-autumn-sky-1953.jpg "Autumn Sky, 1953, Audrey Flack")
     </ThirdWidth>
 </FlexContainer>
 
@@ -99,6 +119,21 @@ that appear as if they came from the training dataset. While today AI image gene
 </FlexContainer>
 
 ##### Training Time
+<FlexContainer>
+    <ThirdWidth>
+        Training time is a parameter of network training and refers to how long we train the network before generating images.
+        A training epoch is one pass through all the images in the training dataset.
+        In my experiments, I generated images after 300, 600, 900, and 12,000 epochs.
+    </ThirdWidth>
+    <HalfWidth>
+    </HalfWidth>
+</FlexContainer>
+<HalfWidth>
+    ![training time diagram](./training-time.jpg)
+
+</HalfWidth>
+
+
 
 
 #### UI Prototype
