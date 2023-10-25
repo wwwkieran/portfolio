@@ -36,7 +36,7 @@ module.exports = {
             options: {
               maxWidth: 1200,
               linkImagesToOriginal: false,
-              showCaptions: ['title'],
+              showCaptions: ['title']
             }
           },
           {
@@ -57,7 +57,8 @@ module.exports = {
             options: {
               ignoreFileExtensions: ['png', 'jpg', 'jpeg', 'bmp', 'tiff']
             }
-          }
+          },
+          'gatsby-plugin-react-svg'
         ]
       }
     }
