@@ -12,6 +12,7 @@ role: ""
 index: 6
 ---
 import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth, CustomWidth } from '../../../components/post'
+import OutputSizeDiagram from './output-size-vert.svg'
 
 #### Introduction
 
@@ -112,20 +113,20 @@ that appear as if they came from the training dataset. While today AI image gene
 
 ##### Output Canvas Size
 <FlexContainer>
-<ThirdWidth>
+<ThirdWidth centerVertically={false}>
     Output canvas size is a parameter of the network architecture.
     It determines how large of an image the neural network will output.
 
     I observed that the image would become increasingly complex and phenomena within the image would become disjoint and seemingly haphazard as image size was increased.
 </ThirdWidth>
 <HalfWidth>
-    ![output size diagram](./output-size.jpg)
+   <OutputSizeDiagram/>
 </HalfWidth>
 </FlexContainer>
 
 ##### Training Time
 <FlexContainer>
-    <ThirdWidth>
+    <ThirdWidth centerVertically={false}>
         Training time is a parameter of network training and refers to how long we train the network before generating images.
         A training epoch is one pass through all the images in the training dataset.
         In my experiments, I generated images after 300, 600, 900, and 12,000 epochs.
@@ -134,8 +135,6 @@ that appear as if they came from the training dataset. While today AI image gene
         ![training time diagram](./training-time.jpg)
     </HalfWidth>
 </FlexContainer>
-
-
 
 
 #### UI Prototype

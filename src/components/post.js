@@ -92,15 +92,21 @@ HalfWidth.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export const ThirdWidth = ({ children }) => {
+export const ThirdWidth = ({ centerVertically = true, children }) => {
+  const style = {}
+  if (!centerVertically) {
+    style.marginTop = '0px'
+    style.marginBottom = 'auto'
+  }
   return (
-        <div className={ thirdWidth }>
+        <div style={style} className={ thirdWidth }>
             {children}
         </div>)
 }
 
 ThirdWidth.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  centerVertically: PropTypes.node.isOptional
 }
 
 export const TwoThirdsWidth = ({ children }) => {
