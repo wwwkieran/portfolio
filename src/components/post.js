@@ -1,6 +1,22 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { container, headerContainer, metadataContainer, descriptionContainer, metadataElement, metadataLabel, metadataValue, metadataSpacer, flexContainer, halfWidth, thirdWidth, twoThirdsWidth, nextPrevProjectDiv } from './post.module.scss'
+import {
+  container,
+  headerContainer,
+  metadataContainer,
+  descriptionContainer,
+  metadataElement,
+  metadataLabel,
+  metadataValue,
+  metadataSpacer,
+  flexContainer,
+  halfWidth,
+  thirdWidth,
+  twoThirdsWidth,
+  nextPrevProjectDiv,
+  twentyPercentWidth,
+  contentContainer
+} from './post.module.scss'
 import ClassicWindow from './classicWindow'
 import { MDXProvider } from '@mdx-js/react'
 import { PropTypes } from 'prop-types'
@@ -96,6 +112,29 @@ export const TwoThirdsWidth = ({ children }) => {
 
 TwoThirdsWidth.propTypes = {
   children: PropTypes.node.isRequired
+}
+
+export const TwentyPercentWidth = ({ children }) => {
+  return (
+        <div className={ twentyPercentWidth }>
+            {children}
+        </div>)
+}
+
+TwentyPercentWidth.propTypes = {
+  children: PropTypes.node.isRequired
+}
+
+export const CustomWidth = ({ width, children }) => {
+  return (
+        <div style={{ width }} className={ contentContainer }>
+            {children}
+        </div>)
+}
+
+CustomWidth.propTypes = {
+  children: PropTypes.node.isRequired,
+  width: PropTypes.node.isRequired
 }
 
 export default Post

@@ -47,15 +47,11 @@ h4 {
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
-  padding: 15px;
 }
 
 .contentContainer {
-  margin: 50px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+
 }
 
 .halfWidth {
@@ -71,6 +67,11 @@ h4 {
 .twoThirdsWidth {
   @extend .contentContainer;
   width: 66%;
+}
+
+.twentyPercentWidth {
+  @extend .contentContainer;
+  width: 20%;
 }
 
 .nextPrevProjectDiv {
@@ -116,5 +117,9 @@ h4 {
 
   .headerContainer {
     flex-wrap: wrap;
+  }
+
+  .twentyPercentWidth {
+    width: 50%;
   }
 }

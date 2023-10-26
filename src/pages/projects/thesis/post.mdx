@@ -11,7 +11,7 @@ link: "https://cs.middlebury.edu"
 role: ""
 index: 6
 ---
-import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth } from '../../../components/post'
+import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth, CustomWidth } from '../../../components/post'
 
 #### Introduction
 
@@ -63,22 +63,26 @@ that appear as if they came from the training dataset. While today AI image gene
         3,684 works of 19th century Impressionist painting, including:
 
     </ThirdWidth>
-    <ThirdWidth>
-        ![Garden in Grez](./imp-sample/garden-in-grez.jpg "Garden in Grez, 1883, Carl Larsson")
-    </ThirdWidth>
+    <HalfWidth>
+        <FlexContainer>
+            <CustomWidth width={"35%"}>
+                ![Garden in Grez](./imp-sample/garden-in-grez.jpg "Garden in Grez, 1883, Carl Larsson")
+            </CustomWidth>
+            <CustomWidth width={"45%"}>
+                ![La Gare Saint-Lazare](./imp-sample/gare-st-lazare.jpg "La Gare Saint-Lazare, 1877, Claude Monet")
+            </CustomWidth>
+            <CustomWidth width={"45%"}>
+                ![The Railway](./imp-sample/railway.jpg "The Railway, 1873, Edouard Manet")
+            </CustomWidth>
+            <CustomWidth width={"45%"}>
+                ![The Grands Boulevards](./imp-sample/the-great-boulevards-1875.jpg "The Grands Boulevards, 1875, Pierre-Auguste Renoir")
+            </CustomWidth>
+        </FlexContainer>
+    </HalfWidth>
+
 </FlexContainer>
 
-<FlexContainer>
-    <ThirdWidth>
-        ![La Gare Saint-Lazare](./imp-sample/gare-st-lazare.jpg "La Gare Saint-Lazare, 1877, Claude Monet")
-    </ThirdWidth>
-    <ThirdWidth>
-        ![The Railway](./imp-sample/railway.jpg "The Railway, 1873, Edouard Manet")
-    </ThirdWidth>
-    <ThirdWidth>
-        ![The Grands Boulevards](./imp-sample/the-great-boulevards-1875.jpg "The Grands Boulevards, 1875, Pierre-Auguste Renoir")
-    </ThirdWidth>
-</FlexContainer>
+
 
 ##### Abstract Expressionist
 <FlexContainer>
@@ -86,18 +90,19 @@ that appear as if they came from the training dataset. While today AI image gene
         3,284 works of 20th century American abstract painting, including:
 
     </ThirdWidth>
-    <ThirdWidth>
+    <HalfWidth>
+    <FlexContainer>
+    <CustomWidth width={"25%"}>
         ![Number 5](./abex-sample/No._5,_1948.jpg "Number 5, 1948, Jackson Pollock")
-    </ThirdWidth>
-</FlexContainer>
-
-<FlexContainer>
-    <ThirdWidth>
-        ![Blue, Orange, Red](./abex-sample/blue-orange-red.jpg!Large.jpg "Blue, Orange, Red, 1961, Mark Rothko")
-    </ThirdWidth>
-    <ThirdWidth>
+    </CustomWidth>
+    <CustomWidth width={"35%"}>
         ![Autumn Sky](./abex-sample/abstract-expressionist-autumn-sky-1953.jpg "Autumn Sky, 1953, Audrey Flack")
-    </ThirdWidth>
+    </CustomWidth>
+    <CustomWidth width={"30%"}>
+        ![Blue, Orange, Red](./abex-sample/blue-orange-red.jpg!Large.jpg "Blue, Orange, Red, 1961, Mark Rothko")
+    </CustomWidth>
+    </FlexContainer>
+    </HalfWidth>
 </FlexContainer>
 
 
