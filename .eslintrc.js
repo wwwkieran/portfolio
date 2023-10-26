@@ -25,8 +25,10 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react'
+    'react',
+    'import-newlines'
   ],
   rules: {
+    'import-newlines/enforce': 'error'
   }
 }
