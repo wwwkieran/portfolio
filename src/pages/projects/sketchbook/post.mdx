@@ -12,24 +12,33 @@ role: ""
 index: 4
 ---
 
-This is my first blog post! Isn't it *great*?
+import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth, CustomWidth } from '../../../components/post'
 
-Some of my **favorite** things are:
+#### Motivation
+<FlexContainer>
+    <ThirdWidth>
+        P5.js is a popular Javascript library for creative coding. The creators of P5.js have also created an online editor, which provides an easy way for beginners to get started. However, the online editor has some disadvantages for the intermediate or advanced creative coder:
 
-* Petting dogs
-* Singing
-* Eating potato-based foods
+        - No local development, user must be connected to the internet to edit their sketches.
+        - Code cannot be shared between sketches.
+        - Node.js modules for additional functionality cannot be imported.
+        - Presentation and distribution of completed sketches cannot be controlled.
+    </ThirdWidth>
+    <HalfWidth>
+        `video: ./p5webeditor-min.mp4`
+    </HalfWidth>
+</FlexContainer>
 
-# This is a test
+#### Initial Approach
+<FlexContainer>
+    <ThirdWidth>
+        My first approach was to create a template repository for a single sketch using Node.js and Webpack.
 
-## This is a test
+        I added GitHub actions code to automatically deploy to GitHub pages, a free hosting service, so the latest version of the sketch would always be live on the internet.
 
-### This is a test
-
-#### This is a test
-
-##### This is a test
-
-###### This is a test
-
-This is a test paragraph
+        While this workflow improved upon the online editor, it still had some shortcomings, since only one sketch was supported per repository. As a result, there could be no code reuse between sketches, and a new repository had to be created for every new sketch which was cumbersome and duplicative.
+    </ThirdWidth>
+    <HalfWidth>
+        `video: ./p5webeditor-min.mp4`
+    </HalfWidth>
+</FlexContainer>
