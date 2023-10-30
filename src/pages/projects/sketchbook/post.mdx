@@ -42,3 +42,94 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
         `video: ./p5_webpack_boilerplate-min.mp4`
     </HalfWidth>
 </FlexContainer>
+
+#### Building the Sketchbook
+<FlexContainer>
+    <ThirdWidth>
+        I wanted to take the innovations from my first approach, but make a workflow that could automatically index sketches in a single directory in a single repo.
+        To do accomplish this, I wrote custom webpack logic to minimize each sketch in a directory, and add HTML to an index page to point the the page for that sketch. Metadata is read from inside the sketch file to see the sketch description and date created. The file name is used as the sketch name.
+
+
+    </ThirdWidth>
+    <HalfWidth>
+        Directory structure diagram?
+        Site build workflow diagram?
+        Image of site index?
+    </HalfWidth>
+</FlexContainer>
+
+<FlexContainer>
+    <ThirdWidth>
+        Webpack bundle splitting is used, so JS is minimized libraries are cached and shared between sketches. For example, P5.js is only downloaded once, then opening subsequent sketches the only new downloads are a few bytes for the code of that sketch itself. This is a massive performance gain.
+
+    </ThirdWidth>
+    <HalfWidth>
+        Chrome dev tools showing benefit
+    </HalfWidth>
+</FlexContainer>
+
+#### My Sketchbook
+<FlexContainer>
+    <ThirdWidth>
+        Using this workflow, my personal sketchbook has grown to contain 60+ unique sketches.
+
+        It is like on the internet at [sketchbook.kieran.lol](https://sketchbook.kieran.lol).
+    </ThirdWidth>
+    <HalfWidth>
+       Sample sketch one
+    </HalfWidth>
+</FlexContainer>
+
+<FlexContainer>
+    <HalfWidth>
+        Sample sketch two
+    </HalfWidth>
+    <HalfWidth>
+        Sample sketch three
+    </HalfWidth>
+</FlexContainer>
+
+<FlexContainer>
+    <ThirdWidth>
+        Code resuse enables me to iterate on similar ideas without overwriting existing code or unnecessarily duplicating.
+
+       For example, I created a helper function to convert 3d coordinates into a 2d isometric projection and used it to create a series of isometric sketches.
+    </ThirdWidth>
+    <HalfWidth>
+        <FlexContainer>
+            <CustomWidth width={"35%"}>
+                ![isometric_01](./isometric_01.jpg "[ISOMETRIC_01](https://sketchbook.kieran.lol/isomtretic_01.html)")
+            </CustomWidth>
+            <CustomWidth width={"35%"}>
+                ![isometric_04](./isometric_04.jpg "[ISOMETRIC_04](https://sketchbook.kieran.lol/isomtretic_04.html)")
+            </CustomWidth>
+            <CustomWidth width={"35%"}>
+                ![isometric_05](./isometric_05.jpg "ISOMETRIC_05")
+            </CustomWidth>
+        </FlexContainer>
+    </HalfWidth>
+</FlexContainer>
+
+#### Sketchbook as a Platform
+<FlexContainer>
+    <ThirdWidth>
+        Once I was happy with the workflow for myself, I wanted to make a generic version available for anyone to come and easily set up their own sketchbook.
+
+        I forked my sketchbook repo, remove my sketches, wrote a README with instructions, and set it up as a github template. Now others can easily create their own sketchbook.
+
+        This solves all of the issues with the basic online [P5js.org](http://P5js.org) editor, but it introduces a new one: no online editing. No need to reinvent the wheel here, as there are many online editors that can
+    </ThirdWidth>
+    <HalfWidth>
+       video of sketchbook editing in online editor
+    </HalfWidth>
+</FlexContainer>
+
+#### Conclusion
+<FlexContainer>
+    <ThirdWidth>
+        The key here is making people aware of alternatives. This solution is not meaningfully more complicated that using the online editor, but has many benefits. It just needs to be engineered and presented in an easy way, so intermediate creative coders will be encouraged to set up a sketchbook instead of creating oneoff sketches on the online editor.
+    </ThirdWidth>
+    <HalfWidth>
+       video of sketchbook editing in online editor
+    </HalfWidth>
+</FlexContainer>
