@@ -82,10 +82,99 @@
 			
 			loop
 		></video>
-	</span></p></div></div><div class="post-module--flexContainer--e76c6"><div class="post-module--nextPrevProjectDiv--956d8" style="margin-right:auto"><a href="/quicksettings-iterator/"> <p>← Previous Project</p> <h6>Quick-Settings Iterator</h6> </a></div><div class="post-module--nextPrevProjectDiv--956d8" style="text-align:right"><a href="/3d-scanning-for-architects/"> <p> Next Project → </p> <h6>3D Scanning for Architects</h6> </a></div></div></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/sketchbook/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+	</span></p></div></div>
+<h4 id="building-the-sketchbook" style="position:relative"><a href="#building-the-sketchbook" aria-label="building the sketchbook permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Building the Sketchbook</h4>
+<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>I wanted to take the innovations from my first approach, but make a workflow that could automatically index sketches in a single directory in a single repo.
+To do accomplish this, I wrote custom webpack logic to minimize each sketch in a directory, and add HTML to an index page to point the the page for that sketch. Metadata is read from inside the sketch file to see the sketch description and date created. The file name is used as the sketch name.</p></div><div class="post-module--halfWidth--39cbc"><p>Directory structure diagram?
+Site build workflow diagram?
+Image of site index?</p></div></div>
+<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>Webpack bundle splitting is used, so JS is minimized libraries are cached and shared between sketches. For example, P5.js is only downloaded once, then opening subsequent sketches the only new downloads are a few bytes for the code of that sketch itself. This is a massive performance gain.</p></div><div class="post-module--halfWidth--39cbc"><p>Chrome dev tools showing benefit</p></div></div>
+<h4 id="my-sketchbook" style="position:relative"><a href="#my-sketchbook" aria-label="my sketchbook permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>My Sketchbook</h4>
+<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>Using this workflow, my personal sketchbook has grown to contain 60+ unique sketches.</p><p>It is like on the internet at <a href="https://sketchbook.kieran.lol">sketchbook.kieran.lol</a>.</p></div><div class="post-module--halfWidth--39cbc"><p>Sample sketch one</p></div></div>
+<div class="post-module--flexContainer--e76c6"><div class="post-module--halfWidth--39cbc"><p>Sample sketch two</p></div><div class="post-module--halfWidth--39cbc"><p>Sample sketch three</p></div></div>
+<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>Code resuse enables me to iterate on similar ideas without overwriting existing code or unnecessarily duplicating.</p><p>For example, I created a helper function to convert 3d coordinates into a 2d isometric projection and used it to create a series of isometric sketches.</p></div><div class="post-module--halfWidth--39cbc"><div class="post-module--flexContainer--e76c6"><div style="width:35%" class="post-module--contentContainer--79011"><span><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAEDBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAeBNsiAsAD//xAAZEAABBQAAAAAAAAAAAAAAAAAxAAEDECD/2gAIAQEAAQUCNxpzj//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABYQAAMAAAAAAAAAAAAAAAAAAAEQIP/aAAgBAQAGPwJmv//EABoQAQACAwEAAAAAAAAAAAAAAAEQEQAxUSH/2gAIAQEAAT8hB0J82eYrTqBoTs//2gAMAwEAAgADAAAAEHAAAP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8QH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8QH//EABoQAQEAAwEBAAAAAAAAAAAAAAERABAhMUH/2gAIAQEAAT8QcjL7zPukLkCrgEELZpRPIu//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="isometric_01"
+        title="[ISOMETRIC_01](https://sketchbook.kieran.lol/isomtretic_01.html)"
+        src="/static/586f371474ccff98e7c70981ce60b23f/e5166/isometric_01.jpg"
+        srcset="/static/586f371474ccff98e7c70981ce60b23f/f93b5/isometric_01.jpg 300w,
+/static/586f371474ccff98e7c70981ce60b23f/b4294/isometric_01.jpg 600w,
+/static/586f371474ccff98e7c70981ce60b23f/e5166/isometric_01.jpg 1200w,
+/static/586f371474ccff98e7c70981ce60b23f/b89ad/isometric_01.jpg 1608w"
+        sizes="(max-width: 1200px) 100vw, 1200px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">[ISOMETRIC_01](https://sketchbook.kieran.lol/isomtretic_01.html)</figcaption>
+  </figure></span></div><div style="width:35%" class="post-module--contentContainer--79011"><span><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 931px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAMBBQL/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/2gAMAwEAAhADEAAAAeHanvN56rUjoYD/xAAaEAADAQADAAAAAAAAAAAAAAAAAQIRAxAh/9oACAEBAAEFAlDZfGYybTH4XWs3r//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABcQAAMBAAAAAAAAAAAAAAAAAAAQISD/2gAIAQEABj8CI7n/xAAbEAEAAgMBAQAAAAAAAAAAAAABABEQITFBYf/aAAgBAQABPyFo1Q+zUJ5EujDg4/YgWqg2mFPW8f/aAAwDAQACAAMAAAAQN/AA/8QAFxEBAQEBAAAAAAAAAAAAAAAAAREAEP/aAAgBAwEBPxACaHf/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREQ/9oACAECAQE/EK6Kb//EABsQAQEAAwEBAQAAAAAAAAAAAAERACExQRBh/9oACAEBAAE/EAe9mjUyHJonr+4jBLvZlHRJPXOYpAD1yOVJK/Jdo5Xnz//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="isometric_04"
+        title="[ISOMETRIC_04](https://sketchbook.kieran.lol/isomtretic_04.html)"
+        src="/static/17943291f054616ddd517ca07f95246d/c8a40/isometric_04.jpg"
+        srcset="/static/17943291f054616ddd517ca07f95246d/f93b5/isometric_04.jpg 300w,
+/static/17943291f054616ddd517ca07f95246d/b4294/isometric_04.jpg 600w,
+/static/17943291f054616ddd517ca07f95246d/c8a40/isometric_04.jpg 931w"
+        sizes="(max-width: 931px) 100vw, 931px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">[ISOMETRIC_04](https://sketchbook.kieran.lol/isomtretic_04.html)</figcaption>
+  </figure></span></div><div style="width:35%" class="post-module--contentContainer--79011"><span><figure class="gatsby-resp-image-figure" style="">
+    <span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAMFAQIE/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAABqJdewqmRGAD/xAAaEAADAQADAAAAAAAAAAAAAAABAgMABBAS/9oACAEBAAEFApT95+KwDIymdyM9jNS7Me//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAdEAACAgEFAAAAAAAAAAAAAAAAAQIRMRIgISJh/9oACAEBAAY/AnfCLj2XhTQlJakXB5wW3s//xAAcEAADAAEFAAAAAAAAAAAAAAAAAREgIVFhcZH/2gAIAQEAAT8hXS9xCJ2woEmaCz6iRvEXBuH/2gAMAwEAAgADAAAAEIMAAP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8QH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8QH//EACEQAQAABQMFAAAAAAAAAAAAAAEAESExQSBxwVFhgaHR/9oACAEBAAE/EBVloFZ52hOxsH3mEYTiU4NCsp2OznzFAGepTZidFsoy9Gj/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="isometric_05"
+        title="ISOMETRIC_05"
+        src="/static/6c91e21b95c1c79c0494a31f64daf5c3/e5166/isometric_05.jpg"
+        srcset="/static/6c91e21b95c1c79c0494a31f64daf5c3/f93b5/isometric_05.jpg 300w,
+/static/6c91e21b95c1c79c0494a31f64daf5c3/b4294/isometric_05.jpg 600w,
+/static/6c91e21b95c1c79c0494a31f64daf5c3/e5166/isometric_05.jpg 1200w,
+/static/6c91e21b95c1c79c0494a31f64daf5c3/d9c39/isometric_05.jpg 1800w,
+/static/6c91e21b95c1c79c0494a31f64daf5c3/b19f9/isometric_05.jpg 1809w"
+        sizes="(max-width: 1200px) 100vw, 1200px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span>
+    <figcaption class="gatsby-resp-image-figcaption">ISOMETRIC_05</figcaption>
+  </figure></span></div></div></div></div>
+<h4 id="sketchbook-as-a-platform" style="position:relative"><a href="#sketchbook-as-a-platform" aria-label="sketchbook as a platform permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Sketchbook as a Platform</h4>
+<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>Once I was happy with the workflow for myself, I wanted to make a generic version available for anyone to come and easily set up their own sketchbook.</p><p>I forked my sketchbook repo, remove my sketches, wrote a README with instructions, and set it up as a github template. Now others can easily create their own sketchbook.</p><p>This solves all of the issues with the basic online <a href="http://P5js.org">P5js.org</a> editor, but it introduces a new one: no online editing. No need to reinvent the wheel here, as there are many online editors that can</p></div><div class="post-module--halfWidth--39cbc"><p>video of sketchbook editing in online editor</p></div></div>
+<h4 id="conclusion" style="position:relative"><a href="#conclusion" aria-label="conclusion permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Conclusion</h4>
+<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>The key here is making people aware of alternatives. This solution is not meaningfully more complicated that using the online editor, but has many benefits. It just needs to be engineered and presented in an easy way, so intermediate creative coders will be encouraged to set up a sketchbook instead of creating oneoff sketches on the online editor.</p></div><div class="post-module--halfWidth--39cbc"><p>video of sketchbook editing in online editor</p></div></div><div class="post-module--flexContainer--e76c6"><div class="post-module--nextPrevProjectDiv--956d8" style="margin-right:auto"><a href="/quicksettings-iterator/"> <p>← Previous Project</p> <h6>Quick-Settings Iterator</h6> </a></div><div class="post-module--nextPrevProjectDiv--956d8" style="text-align:right"><a href="/3d-scanning-for-architects/"> <p> Next Project → </p> <h6>3D Scanning for Architects</h6> </a></div></div></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/sketchbook/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-26c605ece36a43b105bc.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-df10320ff692096b7589.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-764a669514962bbd4826.js\"],\"component---src-pages-blog-post-js\":[\"/component---src-pages-blog-post-js-59fe1ccea8460101aae9.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-3-d-scanning-for-architects-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-3-d-scanning-for-architects-post-mdx-8fc075eea1150e7e9091.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-generative-prints-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-generative-prints-post-mdx-3f6d8be5d462ddd34771.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-pixel-painter-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-pixel-painter-post-mdx-c01fcfec8f4b500e5064.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-quicksettings-iterator-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-quicksettings-iterator-post-mdx-a646356e49f294bab168.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-sketchbook-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-sketchbook-post-mdx-c113fe906950980c714d.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-thesis-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-thesis-post-mdx-1ceb407ab342ead8c7ec.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-32c988e9fed62b67d3f7.js\"],\"component---src-pages-projects-3-d-scanning-for-architects-post-mdx\":[],\"component---src-pages-projects-generative-prints-post-mdx\":[\"/component---src-pages-projects-generative-prints-post-mdx-c22ecbb9872be820d6be.js\"],\"component---src-pages-projects-pixel-painter-post-mdx\":[\"/component---src-pages-projects-pixel-painter-post-mdx-410e6dfe3251dd8895a7.js\"],\"component---src-pages-projects-quicksettings-iterator-post-mdx\":[\"/component---src-pages-projects-quicksettings-iterator-post-mdx-04c728a81dd5c70621d2.js\"],\"component---src-pages-projects-sketchbook-post-mdx\":[\"/component---src-pages-projects-sketchbook-post-mdx-3a4cd12e1a74dfa6d624.js\"],\"component---src-pages-projects-thesis-post-mdx\":[]}";
+            window.___chunkMapping="{\"app\":[\"/app-e09fb79326556cbb5dfe.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-df10320ff692096b7589.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-764a669514962bbd4826.js\"],\"component---src-pages-blog-post-js\":[\"/component---src-pages-blog-post-js-59fe1ccea8460101aae9.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-3-d-scanning-for-architects-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-3-d-scanning-for-architects-post-mdx-8fc075eea1150e7e9091.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-generative-prints-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-generative-prints-post-mdx-3f6d8be5d462ddd34771.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-pixel-painter-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-pixel-painter-post-mdx-c01fcfec8f4b500e5064.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-quicksettings-iterator-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-quicksettings-iterator-post-mdx-a646356e49f294bab168.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-sketchbook-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-sketchbook-post-mdx-29642b7848dbce9fe526.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-thesis-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-thesis-post-mdx-1ceb407ab342ead8c7ec.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-32c988e9fed62b67d3f7.js\"],\"component---src-pages-projects-3-d-scanning-for-architects-post-mdx\":[],\"component---src-pages-projects-generative-prints-post-mdx\":[\"/component---src-pages-projects-generative-prints-post-mdx-c22ecbb9872be820d6be.js\"],\"component---src-pages-projects-pixel-painter-post-mdx\":[\"/component---src-pages-projects-pixel-painter-post-mdx-410e6dfe3251dd8895a7.js\"],\"component---src-pages-projects-quicksettings-iterator-post-mdx\":[\"/component---src-pages-projects-quicksettings-iterator-post-mdx-04c728a81dd5c70621d2.js\"],\"component---src-pages-projects-sketchbook-post-mdx\":[],\"component---src-pages-projects-thesis-post-mdx\":[]}";
           </script>
-        <script>window.___webpackCompilationHash="2f2f7d9d787446b32045";</script><script src="/webpack-runtime-fef2f8fb5ffaf0921b54.js" async></script><script src="/framework-e817803d957448322269.js" async></script><script src="/app-26c605ece36a43b105bc.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="bf25f5a98f106a74f07a";</script><script src="/webpack-runtime-5e9f326151c852c69791.js" async></script><script src="/framework-e817803d957448322269.js" async></script><script src="/app-e09fb79326556cbb5dfe.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
