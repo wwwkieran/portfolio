@@ -11,25 +11,36 @@ link: ""
 role: ""
 index: 3
 ---
+import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth, CustomWidth } from '../../../components/post'
 
-This is my first blog post! Isn't it *great*?
+#### Motivation
+<FlexContainer>
+    <ThirdWidth>
+        Generative art sketches are often created with code that draws according to input parameters, where changing these parameters can change the output image.
+    </ThirdWidth>
+    <HalfWidth>
+        Example sketch with one variable changed 4 times.
+    </HalfWidth>
+</FlexContainer>
+<FlexContainer>
+    <ThirdWidth>
+        To add a simple UI to adjust parameters, I use [quicksettings](https://github.com/bit101/quicksettings) by bit101.
+        However, this requires manual work to see all the possibilities.
+        ** What if there were an automatic way to visualize the entirety of a sketch’s parameter space? **
+    </ThirdWidth>
+    <HalfWidth>
+        video of vanilla quicksettings
+    </HalfWidth>
+</FlexContainer>
 
-Some of my **favorite** things are:
+#### Initial Approach
+<FlexContainer>
+    <ThirdWidth>
+        I thought it would be interesting to try animating the change in parameters over time.
 
-* Petting dogs
-* Singing
-* Eating potato-based foods
-
-# This is a test
-
-## This is a test
-
-### This is a test
-
-#### This is a test
-
-##### This is a test
-
-###### This is a test
-
-This is a test paragraph
+        To do this, I created my own fork of the quicksettings repo, and implement a simple function to increase each parameter by one each time step.
+    </ThirdWidth>
+    <HalfWidth>
+        First approach diagram.
+    </HalfWidth>
+</FlexContainer>
