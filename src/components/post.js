@@ -15,7 +15,8 @@ import {
   twoThirdsWidth,
   nextPrevProjectDiv,
   twentyPercentWidth,
-  contentContainer
+  contentContainer,
+  caption
 } from './post.module.scss'
 import ClassicWindow from './classicWindow'
 import { MDXProvider } from '@mdx-js/react'
@@ -141,6 +142,17 @@ export const CustomWidth = ({ width, children }) => {
 CustomWidth.propTypes = {
   children: PropTypes.node.isRequired,
   width: PropTypes.node.isRequired
+}
+
+export const Caption = ({ children }) => {
+  return (
+        <div className={ caption }>
+            {children}
+        </div>)
+}
+
+Caption.propTypes = {
+  children: PropTypes.node.isRequired
 }
 
 export default Post

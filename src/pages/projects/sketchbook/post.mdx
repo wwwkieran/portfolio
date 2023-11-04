@@ -12,7 +12,15 @@ role: ""
 index: 4
 ---
 
-import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth, CustomWidth } from '../../../components/post'
+import {
+    FlexContainer,
+    HalfWidth,
+    ThirdWidth,
+    TwoThirdsWidth,
+    TwentyPercentWidth,
+    CustomWidth,
+    Caption
+} from '../../../components/post'
 
 #### Motivation
 <FlexContainer>
@@ -71,15 +79,17 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 
 #### My Sketchbook
 <FlexContainer>
-    <ThirdWidth>
+    <HalfWidth>
+        <CustomWidth width={"75%"}>
         Using this workflow, my personal sketchbook has grown to contain 60+ unique sketches.
 
         It is live on the internet at [sketchbook.kieran.lol](https://sketchbook.kieran.lol).
-    </ThirdWidth>
+        </CustomWidth>
+    </HalfWidth>
     <HalfWidth>
         <CustomWidth width={"75%"}>
             `video: ./untitled_13.mp4`
-            UNTITLED_13
+            <Caption>[UNTITLED_13](https://sketchbook.kieran.lol/untitled_13.html) </Caption>
         </CustomWidth>
     </HalfWidth>
 </FlexContainer>
@@ -87,34 +97,45 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 <FlexContainer>
     <HalfWidth>
         <CustomWidth width={"75%"}>
-        ![untitled_16](./untitled_16.jpg "UNTITLED_16")
+        ![untitled_16](./untitled_16.jpg)
+            <Caption>[UNTITLED_16](https://sketchbook.kieran.lol/untitled_16.html) </Caption>
         </CustomWidth>
     </HalfWidth>
     <HalfWidth>
         <CustomWidth width={"75%"}>
-        ![untitled_21](./untitled_21.jpg "UNTITLED_21")
+        ![untitled_21](./untitled_21.jpg)
+            <Caption>[UNTITLED_21](https://sketchbook.kieran.lol/untitled_21.html) </Caption>
         </CustomWidth>
     </HalfWidth>
 </FlexContainer>
 
 <FlexContainer>
-    <ThirdWidth>
-        Code resuse enables me to iterate on similar ideas without overwriting existing code or unnecessarily duplicating.
-
-       For example, I created a helper function to convert 3d coordinates into a 2d isometric projection and used it to create a series of isometric sketches.
-    </ThirdWidth>
     <HalfWidth>
-        <FlexContainer>
-            <CustomWidth width={"35%"}>
-                ![isometric_01](./isometric_01.jpg "[ISOMETRIC_01](https://sketchbook.kieran.lol/isomtretic_01.html)")
-            </CustomWidth>
-            <CustomWidth width={"35%"}>
-                ![isometric_04](./isometric_04.jpg "[ISOMETRIC_04](https://sketchbook.kieran.lol/isomtretic_04.html)")
-            </CustomWidth>
-            <CustomWidth width={"35%"}>
-                ![isometric_05](./isometric_05.jpg "ISOMETRIC_05")
-            </CustomWidth>
-        </FlexContainer>
+        <CustomWidth width={"75%"}>
+            Code resuse enables me to iterate on similar ideas without overwriting existing code or unnecessarily duplicating.
+            For example, I created a helper function to convert 3d coordinates into a 2d isometric projection and used it to create a series of isometric sketches.
+        </CustomWidth>
+    </HalfWidth>
+    <HalfWidth>
+        <CustomWidth width={"75%"}>
+            ![isometric_01](./isometric_01.jpg )
+            <Caption>[ISOMETRIC_01](https://sketchbook.kieran.lol/isomtretic_01.html)</Caption>
+        </CustomWidth>
+
+    </HalfWidth>
+</FlexContainer>
+<FlexContainer>
+    <HalfWidth>
+    <CustomWidth width={"75%"}>
+        ![isometric_04](./isometric_04.jpg )
+        <Caption>[ISOMETRIC_04](https://sketchbook.kieran.lol/isomtretic_04.html)</Caption>
+    </CustomWidth>
+    </HalfWidth>
+    <HalfWidth>
+    <CustomWidth width={"75%"}>
+        ![isometric_05](./isometric_05.jpg)
+        <Caption>[ISOMETRIC_05](https://sketchbook.kieran.lol/isomtretic_05.html)</Caption>
+    </CustomWidth>
     </HalfWidth>
 </FlexContainer>
 

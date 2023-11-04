@@ -44,6 +44,14 @@ h4 {
   margin-bottom: 5px;
 }
 
+.caption {
+    @extend h6;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+}
+
 .flexContainer {
   display: flex;
   flex-wrap: wrap;
