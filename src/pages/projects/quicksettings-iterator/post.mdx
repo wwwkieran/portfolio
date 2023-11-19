@@ -11,36 +11,61 @@ link: ""
 role: ""
 index: 3
 ---
-import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth, CustomWidth } from '../../../components/post'
+import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth, CustomWidth, Caption, } from '../../../components/post'
 
 #### Motivation
 <FlexContainer>
-    <ThirdWidth>
+    <ThirdWidth centerVertically={false}>
         Generative art sketches are often created with code that draws according to input parameters, where changing these parameters can change the output image.
     </ThirdWidth>
     <HalfWidth>
-        Example sketch with one variable changed 4 times.
+        <FlexContainer>
+            <HalfWidth>
+                ![disturbance-0](./disturbance-0.jpg )
+                <Caption>0</Caption>
+            </HalfWidth>
+            <HalfWidth>
+                ![disturbance-40](./disturbance-40.jpg )
+                <Caption>40</Caption>
+            </HalfWidth>
+            <HalfWidth>
+                ![disturbance-100](./disturbance-100.jpg )
+                <Caption>100</Caption>
+            </HalfWidth>
+            <HalfWidth>
+                ![disturbance-200](./disturbance-200.jpg )
+                <Caption>200</Caption>
+            </HalfWidth>
+        </FlexContainer>
     </HalfWidth>
 </FlexContainer>
 <FlexContainer>
-    <ThirdWidth>
+    <ThirdWidth centerVertically={false}>
         To add a simple UI to adjust parameters, I use [quicksettings](https://github.com/bit101/quicksettings) by bit101.
         However, this requires manual work to see all the possibilities.
-        ** What if there were an automatic way to visualize the entirety of a sketch’s parameter space? **
     </ThirdWidth>
     <HalfWidth>
-        video of vanilla quicksettings
+        `video: ./vanilla-quicksettings.mp4`
+    </HalfWidth>
+</FlexContainer>
+<FlexContainer>
+    <ThirdWidth centerVertically={false}>
+        **What if there were an automatic way to visualize the entirety of a sketch’s parameter space?**
+    </ThirdWidth>
+    <HalfWidth>
+        ![disturbance-200](./lieberman-tweet.png)
+        <Caption>This question has been raised by other generative artists.</Caption>
     </HalfWidth>
 </FlexContainer>
 
 #### Initial Approach
 <FlexContainer>
-    <ThirdWidth>
+    <ThirdWidth centerVertically={false}>
         I thought it would be interesting to try animating the change in parameters over time.
 
         To do this, I created my own fork of the quicksettings repo, and implement a simple function to increase each parameter by one each time step.
     </ThirdWidth>
     <HalfWidth>
-        First approach diagram.
+        `video: ./initial-attempt.mp4`
     </HalfWidth>
 </FlexContainer>
