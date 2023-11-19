@@ -49,15 +49,158 @@
       }
     })
   </script><link rel="preload" href="/fonts/CHARCOAL.TTF" as="font" type="font/truetype" crossorigin="anonymous"/><title data-gatsby-head="true">Quick-Settings Iterator | Kieran Sagar Parikh</title></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout-module--container--46809"><header class="layout-module--site-title--5b122"><h1 style="margin-top:auto"><a class="layout-module--backButton--77c29" href="/">←</a> <!-- -->Quick-Settings Iterator<!-- --> </h1><h1 class="layout-module--name--aaf9c"> <a href="/">Kieran <br/> Sagar <br/> Parikh </a></h1></header><main><div class="post-module--container--dbd4e"><div class="post-module--headerContainer--102e6"><div class="post-module--metadataContainer--cbcd3"><div class="post-module--metadataElement--681b6"><h6 class="post-module--metadataLabel--a584e"> <!-- -->date<!-- --> </h6><div class="post-module--metadataSpacer--b2669"></div><h6>fall 2023</h6></div></div><div class="post-module--descriptionContainer--411f0"><h3>A utility to help artists explore the parameter spaces of their sketches.</h3></div></div><h4 id="motivation" style="position:relative"><a href="#motivation" aria-label="motivation permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Motivation</h4>
-<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>Generative art sketches are often created with code that draws according to input parameters, where changing these parameters can change the output image.</p></div><div class="post-module--halfWidth--39cbc"><p>Example sketch with one variable changed 4 times.</p></div></div>
-<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>To add a simple UI to adjust parameters, I use <a href="https://github.com/bit101/quicksettings">quicksettings</a> by bit101.
-However, this requires manual work to see all the possibilities.
-** What if there were an automatic way to visualize the entirety of a sketch’s parameter space? **</p></div><div class="post-module--halfWidth--39cbc"><p>video of vanilla quicksettings</p></div></div>
+<div class="post-module--flexContainer--e76c6"><div style="margin-top:0px;margin-bottom:auto" class="post-module--thirdWidth--25fc5"><p>Generative art sketches are often created with code that draws according to input parameters, where changing these parameters can change the output image.</p></div><div class="post-module--halfWidth--39cbc"><div class="post-module--flexContainer--e76c6"><div class="post-module--halfWidth--39cbc"><p><span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 110.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAWABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHsxUs7gc5E3A//xAAYEAADAQEAAAAAAAAAAAAAAAAAAjEBEf/aAAgBAQABBQJqLGosa8Mn/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAFBABAAAAAAAAAAAAAAAAAAAAMP/aAAgBAQAGPwIf/8QAGRABAQADAQAAAAAAAAAAAAAAADEBEBEh/9oACAEBAAE/Iau5RV1Fh7dJv//aAAwDAQACAAMAAAAQa9+B/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEx/9oACAEDAQE/ELqYuo//xAAWEQEBAQAAAAAAAAAAAAAAAAABABD/2gAIAQIBAT8QJjP/xAAdEAEAAgEFAQAAAAAAAAAAAAABABFBECFhcZGx/9oACAEBAAE/EGlS4zOR9m66fNrlUKnRDQM//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="disturbance-0"
+        title=""
+        src="/static/008990da55fd5886db4c87392f50eab4/e5166/disturbance-0.jpg"
+        srcset="/static/008990da55fd5886db4c87392f50eab4/f93b5/disturbance-0.jpg 300w,
+/static/008990da55fd5886db4c87392f50eab4/b4294/disturbance-0.jpg 600w,
+/static/008990da55fd5886db4c87392f50eab4/e5166/disturbance-0.jpg 1200w,
+/static/008990da55fd5886db4c87392f50eab4/d9c39/disturbance-0.jpg 1800w,
+/static/008990da55fd5886db4c87392f50eab4/0440f/disturbance-0.jpg 1899w"
+        sizes="(max-width: 1200px) 100vw, 1200px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></span>
+<div class="post-module--caption--43772">0</div></p></div><div class="post-module--halfWidth--39cbc"><p><span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 110.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAWABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHszUM7gYgTcFf/xAAYEAADAQEAAAAAAAAAAAAAAAAAATECEf/aAAgBAQABBQLVFNUzHeCn/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAFBABAAAAAAAAAAAAAAAAAAAAMP/aAAgBAQAGPwIf/8QAGRAAAwADAAAAAAAAAAAAAAAAABAxAREh/9oACAEBAAE/IR2TKqJj0kj/2gAMAwEAAgADAAAAEBvXwP/EABYRAQEBAAAAAAAAAAAAAAAAAAABMf/aAAgBAwEBPxC6io//xAAVEQEBAAAAAAAAAAAAAAAAAAABIP/aAAgBAgEBPxAj/8QAHBABAAICAwEAAAAAAAAAAAAAAQARIUEQgZGh/9oACAEBAAE/EEipfZawt94nSxc0z4o6xWSWXUNFP//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="disturbance-40"
+        title=""
+        src="/static/389a5689fb7fc0c17da66531ff1ffff7/e5166/disturbance-40.jpg"
+        srcset="/static/389a5689fb7fc0c17da66531ff1ffff7/f93b5/disturbance-40.jpg 300w,
+/static/389a5689fb7fc0c17da66531ff1ffff7/b4294/disturbance-40.jpg 600w,
+/static/389a5689fb7fc0c17da66531ff1ffff7/e5166/disturbance-40.jpg 1200w,
+/static/389a5689fb7fc0c17da66531ff1ffff7/d9c39/disturbance-40.jpg 1800w,
+/static/389a5689fb7fc0c17da66531ff1ffff7/0440f/disturbance-40.jpg 1899w"
+        sizes="(max-width: 1200px) 100vw, 1200px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></span>
+<div class="post-module--caption--43772">40</div></p></div><div class="post-module--halfWidth--39cbc"><p><span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1000px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 110.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAWABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAB7ETVncDSgm4H/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAIxARH/2gAIAQEAAQUCaixqLNvDJ//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABQQAQAAAAAAAAAAAAAAAAAAADD/2gAIAQEABj8CH//EABsQAAMAAgMAAAAAAAAAAAAAAAABMRAhEVGh/9oACAEBAAE/IWas53gr6dkRW2NiR//aAAwDAQACAAMAAAAQq9CB/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEx/9oACAEDAQE/ELqKj//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEP/aAAgBAgEBPxAmM//EABwQAAIDAAMBAAAAAAAAAAAAAAERACExQVFhof/aAAgBAQABPxCoEC8fkYAGQxjmNvZcXHLyaG6qfFDmCLCEBE6SScFCM//Z'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="disturbance-100"
+        title=""
+        src="/static/98202c9c5c2287a27a1732938caf3022/a2510/disturbance-100.jpg"
+        srcset="/static/98202c9c5c2287a27a1732938caf3022/f93b5/disturbance-100.jpg 300w,
+/static/98202c9c5c2287a27a1732938caf3022/b4294/disturbance-100.jpg 600w,
+/static/98202c9c5c2287a27a1732938caf3022/a2510/disturbance-100.jpg 1000w"
+        sizes="(max-width: 1000px) 100vw, 1000px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></span>
+<div class="post-module--caption--43772">100</div></p></div><div class="post-module--halfWidth--39cbc"><p><span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 110.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAWABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAAB7ETVncDSgm4H/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAIxARH/2gAIAQEAAQUCaixqLNvDJ//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABUQAQEAAAAAAAAAAAAAAAAAACAB/9oACAEBAAY/AhT/AP/EABwQAAEEAwEAAAAAAAAAAAAAAAEAESExEEFhcf/aAAgBAQABPyEyLSnkCnwSbrasJSgLvEHHlYv/2gAMAwEAAgADAAAAEPvYgf/EABYRAQEBAAAAAAAAAAAAAAAAAAABMf/aAAgBAwEBPxC6i6j/xAAWEQEBAQAAAAAAAAAAAAAAAAABABD/2gAIAQIBAT8QJjP/xAAbEAEAAgMBAQAAAAAAAAAAAAABABEhQXExUf/aAAgBAQABPxAElLVXZYzaPLxNl3bMnJ8M0fIBYwUhz7EqJWI5xBaEonQwvcKA1rk//9k='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="disturbance-200"
+        title=""
+        src="/static/51bf30c3e841631dd203983d00b6a47e/e5166/disturbance-200.jpg"
+        srcset="/static/51bf30c3e841631dd203983d00b6a47e/f93b5/disturbance-200.jpg 300w,
+/static/51bf30c3e841631dd203983d00b6a47e/b4294/disturbance-200.jpg 600w,
+/static/51bf30c3e841631dd203983d00b6a47e/e5166/disturbance-200.jpg 1200w,
+/static/51bf30c3e841631dd203983d00b6a47e/d9c39/disturbance-200.jpg 1800w,
+/static/51bf30c3e841631dd203983d00b6a47e/0440f/disturbance-200.jpg 1899w"
+        sizes="(max-width: 1200px) 100vw, 1200px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></span>
+<div class="post-module--caption--43772">200</div></p></div></div></div></div>
+<div class="post-module--flexContainer--e76c6"><div style="margin-top:0px;margin-bottom:auto" class="post-module--thirdWidth--25fc5"><p>To add a simple UI to adjust parameters, I use <a href="https://github.com/bit101/quicksettings">quicksettings</a> by bit101.
+However, this requires manual work to see all the possibilities.</p></div><div class="post-module--halfWidth--39cbc"><p><span>
+		<video
+			src=/7e41725088042d448c270cec0eb434dd/vanilla-quicksettings.mp4
+			width="100%"
+			height="auto"
+			preload="auto"
+			muted="true"
+			title="/7e41725088042d448c270cec0eb434dd/vanilla-quicksettings.mp4"
+			autoplay
+			playsinline
+			
+			loop
+		></video>
+	</span></p></div></div>
+<div class="post-module--flexContainer--e76c6"><div style="margin-top:0px;margin-bottom:auto" class="post-module--thirdWidth--25fc5"><p><strong>What if there were an automatic way to visualize the entirety of a sketch’s parameter space?</strong></p></div><div class="post-module--halfWidth--39cbc"><p><span><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 36.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABIUlEQVR42pVRyW6DMBDN/39Mjzn22HPTshsDhVQsJWCHNYTwOp5DpObQqpZGs888v9lNfYeX/RM+sxSO6+PdsuEHIeZ5xn/euq5Ybzfs5qHD4XkPrVqcWo1To0grLNfrvXjbNpZH+/GZ+G6cJhzzAkJIfKQpZBQjjhNC6yGneJYdCbFAIEKkWQYRSrIF4iThWF4UmGiGkZtB2Pc9Nzuui1BKeJ5POoKQkhsEScQLXPZtx4VLNWaJZdvcY0CY3LIshHAcqcAj7iwqcHi4RTx6fsCNr4c3zldVha+6Rl2fUBQllFKsOwKk9Rkt+fzlK3HVkNMqDX0+k63ZL8sKDXHZDwMf6M7hL4fhgeYyXT9Q44iB0Brb8No0DS+5XJYfx/hLvgFyJhIZn96VLAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="disturbance-200"
+        title=""
+        src="/static/1ba9c7b0230e339784b882fe655517af/c1b63/lieberman-tweet.png"
+        srcset="/static/1ba9c7b0230e339784b882fe655517af/5a46d/lieberman-tweet.png 300w,
+/static/1ba9c7b0230e339784b882fe655517af/0a47e/lieberman-tweet.png 600w,
+/static/1ba9c7b0230e339784b882fe655517af/c1b63/lieberman-tweet.png 1200w,
+/static/1ba9c7b0230e339784b882fe655517af/1628f/lieberman-tweet.png 1232w"
+        sizes="(max-width: 1200px) 100vw, 1200px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></span>
+<div class="post-module--caption--43772">This question has been raised by other generative artists.</div></p></div></div>
 <h4 id="initial-approach" style="position:relative"><a href="#initial-approach" aria-label="initial approach permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Initial Approach</h4>
-<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>I thought it would be interesting to try animating the change in parameters over time.</p><p>To do this, I created my own fork of the quicksettings repo, and implement a simple function to increase each parameter by one each time step.</p></div><div class="post-module--halfWidth--39cbc"><p>First approach diagram.</p></div></div><div class="post-module--flexContainer--e76c6"><div class="post-module--nextPrevProjectDiv--956d8" style="margin-right:auto"><a href="/generative-lino/"> <p>← Previous Project</p> <h6>Generative Lino</h6> </a></div><div class="post-module--nextPrevProjectDiv--956d8" style="text-align:right"><a href="/sketchbook/"> <p> Next Project → </p> <h6>Sketchbook</h6> </a></div></div></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/quicksettings-iterator/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<div class="post-module--flexContainer--e76c6"><div style="margin-top:0px;margin-bottom:auto" class="post-module--thirdWidth--25fc5"><p>I thought it would be interesting to try animating the change in parameters over time.</p><p>To do this, I created my own fork of the quicksettings repo, and implement a simple function to increase each parameter by one each time step.</p></div><div class="post-module--halfWidth--39cbc"><p><span>
+		<video
+			src=/de016b912425bc7860f8da9d0bc22c21/initial-attempt.mp4
+			width="100%"
+			height="auto"
+			preload="auto"
+			muted="true"
+			title="/de016b912425bc7860f8da9d0bc22c21/initial-attempt.mp4"
+			autoplay
+			playsinline
+			
+			loop
+		></video>
+	</span></p></div></div><div class="post-module--flexContainer--e76c6"><div class="post-module--nextPrevProjectDiv--956d8" style="margin-right:auto"><a href="/generative-lino/"> <p>← Previous Project</p> <h6>Generative Lino</h6> </a></div><div class="post-module--nextPrevProjectDiv--956d8" style="text-align:right"><a href="/sketchbook/"> <p> Next Project → </p> <h6>Sketchbook</h6> </a></div></div></div></main></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/quicksettings-iterator/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-fa64ba4ddc95852c03f5.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-df10320ff692096b7589.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-764a669514962bbd4826.js\"],\"component---src-pages-blog-post-js\":[\"/component---src-pages-blog-post-js-095027e0c928a2a619c1.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-3-d-scanning-for-architects-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-3-d-scanning-for-architects-post-mdx-8fc075eea1150e7e9091.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-generative-prints-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-generative-prints-post-mdx-3075bda837b48368dff8.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-pixel-painter-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-pixel-painter-post-mdx-de22590535e943818de2.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-quicksettings-iterator-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-quicksettings-iterator-post-mdx-473f9cfdfa01bcb04d03.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-sketchbook-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-sketchbook-post-mdx-29642b7848dbce9fe526.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-thesis-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-thesis-post-mdx-1ceb407ab342ead8c7ec.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-e42a41a7070e8a959b90.js\"],\"component---src-pages-projects-3-d-scanning-for-architects-post-mdx\":[],\"component---src-pages-projects-generative-prints-post-mdx\":[\"/component---src-pages-projects-generative-prints-post-mdx-c22ecbb9872be820d6be.js\"],\"component---src-pages-projects-pixel-painter-post-mdx\":[\"/component---src-pages-projects-pixel-painter-post-mdx-410e6dfe3251dd8895a7.js\"],\"component---src-pages-projects-quicksettings-iterator-post-mdx\":[\"/component---src-pages-projects-quicksettings-iterator-post-mdx-13a9dc7ca23c108802ae.js\"],\"component---src-pages-projects-sketchbook-post-mdx\":[],\"component---src-pages-projects-thesis-post-mdx\":[]}";
+            window.___chunkMapping="{\"app\":[\"/app-062ed9130219326c7e0d.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-df10320ff692096b7589.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-764a669514962bbd4826.js\"],\"component---src-pages-blog-post-js\":[\"/component---src-pages-blog-post-js-095027e0c928a2a619c1.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-3-d-scanning-for-architects-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-3-d-scanning-for-architects-post-mdx-8fc075eea1150e7e9091.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-generative-prints-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-generative-prints-post-mdx-3075bda837b48368dff8.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-pixel-painter-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-pixel-painter-post-mdx-de22590535e943818de2.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-quicksettings-iterator-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-quicksettings-iterator-post-mdx-1bc1c1190fba6780f1fc.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-sketchbook-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-sketchbook-post-mdx-29642b7848dbce9fe526.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-thesis-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-thesis-post-mdx-1ceb407ab342ead8c7ec.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-e42a41a7070e8a959b90.js\"],\"component---src-pages-projects-3-d-scanning-for-architects-post-mdx\":[],\"component---src-pages-projects-generative-prints-post-mdx\":[\"/component---src-pages-projects-generative-prints-post-mdx-c22ecbb9872be820d6be.js\"],\"component---src-pages-projects-pixel-painter-post-mdx\":[\"/component---src-pages-projects-pixel-painter-post-mdx-410e6dfe3251dd8895a7.js\"],\"component---src-pages-projects-quicksettings-iterator-post-mdx\":[],\"component---src-pages-projects-sketchbook-post-mdx\":[],\"component---src-pages-projects-thesis-post-mdx\":[]}";
           </script>
-        <script>window.___webpackCompilationHash="ef6b409465abffb56f4a";</script><script src="/webpack-runtime-63e745acfccec5d0ef70.js" async></script><script src="/framework-e817803d957448322269.js" async></script><script src="/app-fa64ba4ddc95852c03f5.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="fac5cf344d572d4230f6";</script><script src="/webpack-runtime-bc9d78cddfd983c9fcd1.js" async></script><script src="/framework-e817803d957448322269.js" async></script><script src="/app-062ed9130219326c7e0d.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
