@@ -34,6 +34,7 @@ h2{
 h3 {
   font-weight: 300;
   font-family: "Helvetica";
+  line-height: 1.4;
 }
 
 h4{
@@ -63,6 +64,14 @@ h6 {
 p {
   font-weight: 400;
   font-family: "Helvetica Neue";
+  line-height: 1.4;
+}
+
+ul {
+  font-weight: inherit;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1em;
 }
 
 a {
@@ -216,7 +225,7 @@ figcaption {
   }
 
   p {
-    font-size: 12pt;
+    font-size: 11pt;
 
   }
 

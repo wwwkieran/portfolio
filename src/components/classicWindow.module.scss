@@ -22,10 +22,6 @@
 }
 
 .windowHeader {
-  font-family: Charcoal, Geneva, sans-serif;
-  font-size: 1em;
-  -webkit-font-smoothing: none;
-  font-smooth: never;
   display: flex;
   flex-direction: row;
   padding: 0px;
@@ -53,6 +49,10 @@
 }
 
 .windowHeaderText {
+  font-family: Charcoal, Geneva, sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
   flex-shrink: 0;
   padding: 0px;
   margin-top: 3px;

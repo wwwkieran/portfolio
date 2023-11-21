@@ -31,7 +31,7 @@ const ProjectList = () => {
       }
     `)
   const [selectedProject, setSelectedProject] = React.useState('')
-  const [parent, enableAnimations] = useAutoAnimate(/* optional config */)
+  // const [parent, enableAnimations] = useAutoAnimate(/* optional config */)
 
   return (
       <div className={container} onMouseLeave={() => {
@@ -53,7 +53,7 @@ const ProjectList = () => {
                 ))
             }
         </div>
-        <div className={heroContainer} ref={parent}>{
+        <div className={heroContainer}>{
             data.allMdx.nodes.map(node => (
               node.id === selectedProject && (<ProjectHero key={node.id} node={node}/>)
             ))

@@ -2,9 +2,9 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { window, windowHeader, windowHeaderButton, windowHeaderSpacer, windowHeaderText, windowContent, minimizeButtonInternalOne, minimizeButtonInternalTwo, resizeButtonInternal } from './classicWindow.module.scss'
 
-const ClassicWindow = ({ windowTitle, children }) => {
+const ClassicWindow = ({ windowTitle, children, style}) => {
   return (
-        <div className={window} id="window">
+        <div className={window} style={style} id="window">
             <div className={windowHeader} id="windowHeader">
                 <button className={windowHeaderButton} id="closeButton" ></button>
                 <div className={windowHeaderSpacer}></div>
