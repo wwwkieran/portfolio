@@ -15,7 +15,7 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 
 #### Motivation
 <FlexContainer>
-    <ThirdWidth centerVertically={false}>
+    <ThirdWidth>
         Generative art sketches are often created with code that draws according to input parameters, where changing these parameters can change the output image.
     </ThirdWidth>
     <HalfWidth>
@@ -40,7 +40,7 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
     </HalfWidth>
 </FlexContainer>
 <FlexContainer>
-    <ThirdWidth centerVertically={false}>
+    <ThirdWidth>
         To add a simple UI to adjust parameters, I use [quicksettings](https://github.com/bit101/quicksettings) by bit101.
         However, this requires manual work to see all the possibilities.
     </ThirdWidth>
@@ -49,7 +49,7 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
     </HalfWidth>
 </FlexContainer>
 <FlexContainer>
-    <ThirdWidth centerVertically={false}>
+    <ThirdWidth>
         **What if there were an automatic way to visualize the entirety of a sketch’s parameter space?**
     </ThirdWidth>
     <HalfWidth>
@@ -60,7 +60,7 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 
 #### Initial Approach
 <FlexContainer>
-    <ThirdWidth centerVertically={false}>
+    <ThirdWidth>
         I thought it would be interesting to try animating the change in parameters over time.
 
         To do this, I created my own fork of the quicksettings repo, and implement a simple function to increase each parameter by one each time step.
