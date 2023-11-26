@@ -2,8 +2,15 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 // import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { container, metadataContainer, description, imageWindow, imageContainer, seemoreText, textContainer, spacer} from './projectHero.module.scss'
+import { container, metadataContainer, description, imageWindow, imageContainer, seemoreText, textContainer, spacer, heroVideo} from './projectHero.module.scss'
 import ClassicWindow from './classicWindow'
+import PixelPainter from '../images/pixel_painter.mp4'
+import QuickSettings from '../pages/projects/quicksettings-iterator/hierarchical.mp4'
+
+const videoMap = {
+    "PixelPainter": PixelPainter,
+    "QuickSettings": QuickSettings,
+}
 
 // eslint-disable-next-line react/prop-types
 const ProjectHero = ({ node }) => {
@@ -23,7 +30,8 @@ const ProjectHero = ({ node }) => {
                             margin: "10px",
                             marginLeft: "auto",
                         }}>
-                        <GatsbyImage alt={node.frontmatter.hero_image_alt} image={getImage(node.frontmatter.hero_image)} />
+                            {node.frontmatter.hero_video && <video className={heroVideo} autoPlay={"true"} loop={"true"} preload={"auto"}><source src={videoMap[node.frontmatter.hero_video]} type="video/mp4" /></video>}
+                            {node.frontmatter.hero_image && <GatsbyImage alt={node.frontmatter.hero_image_alt} image={getImage(node.frontmatter.hero_image)} />}
                         </ClassicWindow>
             {/*<div style={{ display: 'flex' }}>*/}
             {/*    <div style={{ width: "100%" }}></div>*/}

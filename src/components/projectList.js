@@ -17,6 +17,7 @@ const ProjectList = () => {
               index
               short_description
               hidden
+              hero_video 
               hero_image_alt
               hero_image {
                 childImageSharp {

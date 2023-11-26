@@ -21,6 +21,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        tech
         info
         long_description
         link

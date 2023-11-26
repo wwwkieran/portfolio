@@ -32,6 +32,7 @@ const Post = ({ frontmatter, prev, next, children }) => {
                 <div className={ metadataContainer }>
                     <MetadataElement label="date">{frontmatter.date}</MetadataElement>
                     {frontmatter.info && <MetadataElement label="info">{frontmatter.info}</MetadataElement>}
+                    {frontmatter.tech && <MetadataElement label="tech">{frontmatter.tech}</MetadataElement>}
                     {frontmatter.link && <MetadataElement label="link"><Link to={frontmatter.link}>︎{frontmatter.link}  </Link> </MetadataElement>}
                 </div>
                 <div className={ descriptionContainer }>
