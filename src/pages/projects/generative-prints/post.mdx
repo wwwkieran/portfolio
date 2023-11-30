@@ -11,11 +11,43 @@ link: ""
 tech: "P5.js, InkScape, AxiDraw"
 index: 2
 ---
+import {
+    FlexContainer,
+    HalfWidth,
+    ThirdWidth,
+    TwoThirdsWidth,
+    TwentyPercentWidth,
+    CustomWidth,
+    Caption
+} from '../../../components/post'
 
-This is my first blog post! Isn't it *great*?
+#### Introduction
+<FlexContainer>
+    <HalfWidth>
+        Seeking to take my generative art further, I began using a pen plotter to create physical prints of my parametric sketches.
+        I was especially interested to see how I could create gradients using small, repeated shapes.
 
-Some of my **favorite** things are:
+        <br/>
+    </HalfWidth>
+</FlexContainer>
+<FlexContainer>
+    <ThirdWidth>
+        `video: ./grad1.mp4`
+    </ThirdWidth>
+    <ThirdWidth>
+        `video: ./grad2.mp4`
+    </ThirdWidth>
+</FlexContainer>
 
-* Petting dogs
-* Singing
-* Eating potato-based foods
+#### Proof of Concept
+<FlexContainer>
+    <ThirdWidth>
+        I was curious to see if I could take it one step further and use the plotter to carve linocut stamps for block printing.
+
+        I performed a proof-of-concept experiment and found that while the plotter could carve the lino, it could only carve straight lines in one direction.
+
+    </ThirdWidth>
+    <ThirdWidth>
+        `video: ./proofofconcept.mp4`
+    </ThirdWidth>
+</FlexContainer>
