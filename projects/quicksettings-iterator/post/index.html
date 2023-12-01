@@ -143,9 +143,9 @@
         decoding="async"
       />
     </span></span>
-<div class="post-module--caption--43772">200</div></p></div></div></div></div>
+<div class="post-module--caption--43772">200</div></p></div></div><div class="post-module--caption--43772">The same sketch with different values for the &quot;Disturbance&quot; parameter.</div></div></div>
 <div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>To add a simple UI to adjust parameters, I use <a href="https://github.com/bit101/quicksettings">quicksettings</a> by bit101.
-However, this requires manual work to see all the possibilities.</p></div><div class="post-module--halfWidth--39cbc"><p><span>
+However, this requires manual work to see all the possibilities.</p><p><strong>What if there were an automatic way to visualize the entirety of a sketch’s parameter space?</strong></p></div><div class="post-module--halfWidth--39cbc"><p><span>
 		<video
 			src=/7e41725088042d448c270cec0eb434dd/vanilla-quicksettings.mp4
 			width="100%"
@@ -159,30 +159,6 @@ However, this requires manual work to see all the possibilities.</p></div><div c
 			loop
 		></video>
 	</span></p></div></div>
-<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p><strong>What if there were an automatic way to visualize the entirety of a sketch’s parameter space?</strong></p></div><div class="post-module--halfWidth--39cbc"><p><span><span
-      class="gatsby-resp-image-wrapper"
-      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; "
-    >
-      <span
-    class="gatsby-resp-image-background-image"
-    style="padding-bottom: 36.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABIUlEQVR42pVRyW6DMBDN/39Mjzn22HPTshsDhVQsJWCHNYTwOp5DpObQqpZGs888v9lNfYeX/RM+sxSO6+PdsuEHIeZ5xn/euq5Ybzfs5qHD4XkPrVqcWo1To0grLNfrvXjbNpZH+/GZ+G6cJhzzAkJIfKQpZBQjjhNC6yGneJYdCbFAIEKkWQYRSrIF4iThWF4UmGiGkZtB2Pc9Nzuui1BKeJ5POoKQkhsEScQLXPZtx4VLNWaJZdvcY0CY3LIshHAcqcAj7iwqcHi4RTx6fsCNr4c3zldVha+6Rl2fUBQllFKsOwKk9Rkt+fzlK3HVkNMqDX0+k63ZL8sKDXHZDwMf6M7hL4fhgeYyXT9Q44iB0Brb8No0DS+5XJYfx/hLvgFyJhIZn96VLAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-  ></span>
-  <img
-        class="gatsby-resp-image-image"
-        alt="disturbance-200"
-        title=""
-        src="/static/1ba9c7b0230e339784b882fe655517af/c1b63/lieberman-tweet.png"
-        srcset="/static/1ba9c7b0230e339784b882fe655517af/5a46d/lieberman-tweet.png 300w,
-/static/1ba9c7b0230e339784b882fe655517af/0a47e/lieberman-tweet.png 600w,
-/static/1ba9c7b0230e339784b882fe655517af/c1b63/lieberman-tweet.png 1200w,
-/static/1ba9c7b0230e339784b882fe655517af/1628f/lieberman-tweet.png 1232w"
-        sizes="(max-width: 1200px) 100vw, 1200px"
-        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
-        loading="lazy"
-        decoding="async"
-      />
-    </span></span>
-<div class="post-module--caption--43772">This question has been raised by other generative artists.</div></p></div></div>
 <h4 id="initial-approach" style="position:relative"><a href="#initial-approach" aria-label="initial approach permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Initial Approach</h4>
 <div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p>I thought it would be interesting to try animating the change in parameters over time.</p><p>To do this, I created my own fork of the quicksettings repo, and implement a simple function to increase each parameter by one each time step.</p></div><div class="post-module--halfWidth--39cbc"><p><span>
 		<video
@@ -199,7 +175,7 @@ However, this requires manual work to see all the possibilities.</p></div><div c
 		></video>
 	</span></p></div></div>
 <h4 id="iteration-modes" style="position:relative"><a href="#iteration-modes" aria-label="iteration modes permalink" class="anchor before"><span><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></span></a>Iteration Modes</h4>
-<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p><em>Hierarchical</em></p></div><div class="post-module--halfWidth--39cbc"><div class="post-module--thirdWidth--25fc5"><p><span>
+<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p><strong>Hierarchical:</strong> The parameters are arranged in a hierarchical order, and the lower parameters must iterate through all values before a higher parameter&#x27;s value is changed.</p></div><div class="post-module--halfWidth--39cbc"><div class="post-module--thirdWidth--25fc5"><p><span>
 		<video
 			src=/d0ce47e0a6036999de6c87caae335ef7/hierarchical-detail.mp4
 			width="100%"
@@ -227,7 +203,7 @@ However, this requires manual work to see all the possibilities.</p></div><div c
 			loop
 		></video>
 	</span></p></div></div>
-<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p><em>Sequential</em></p></div><div class="post-module--halfWidth--39cbc"><div class="post-module--thirdWidth--25fc5"><p><span>
+<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p><strong>Sequential:</strong> Each parameter is updated independently, with all values presented for a single parameter before moving on to the next parameter.</p></div><div class="post-module--halfWidth--39cbc"><div class="post-module--thirdWidth--25fc5"><p><span>
 		<video
 			src=/e1a5f409d5552a02de7849646f3c9506/sequential-detail.mp4
 			width="100%"
@@ -255,7 +231,7 @@ However, this requires manual work to see all the possibilities.</p></div><div c
 			loop
 		></video>
 	</span></p></div></div>
-<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p><em>Random</em></p></div><div class="post-module--halfWidth--39cbc"><div class="post-module--thirdWidth--25fc5"><p><span>
+<div class="post-module--flexContainer--e76c6"><div class="post-module--thirdWidth--25fc5"><p><strong>Random:</strong> Random Values are chosen for each parameter on every iteration.</p></div><div class="post-module--halfWidth--39cbc"><div class="post-module--thirdWidth--25fc5"><p><span>
 		<video
 			src=/e54dc7eaa4e92f4f80252243f8447c3b/random-detail.mp4
 			width="100%"
@@ -290,4 +266,4 @@ However, this requires manual work to see all the possibilities.</p></div><div c
           >
             window.___chunkMapping="{\"app\":[\"/app-57f378e2754e2bba7496.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-df10320ff692096b7589.js\"],\"component---src-pages-about-js\":[\"/component---src-pages-about-js-764a669514962bbd4826.js\"],\"component---src-pages-blog-post-js\":[\"/component---src-pages-blog-post-js-75fcc1e615bc72faa08f.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-3-d-scanning-for-architects-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-3-d-scanning-for-architects-post-mdx-8fc075eea1150e7e9091.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-generative-prints-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-generative-prints-post-mdx-a863d84f6fc0c0347752.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-pixel-painter-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-pixel-painter-post-mdx-0ff1b5e0e4b1d9e1f66d.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-quicksettings-iterator-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-quicksettings-iterator-post-mdx-1bc1c1190fba6780f1fc.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-sketchbook-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-sketchbook-post-mdx-29642b7848dbce9fe526.js\"],\"component---src-pages-blog-post-js-content-file-path-src-pages-projects-thesis-post-mdx\":[\"/component---src-pages-blog-post-js-content-file-path-src-pages-projects-thesis-post-mdx-1ceb407ab342ead8c7ec.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-09af950a3bd39964aa5f.js\"],\"component---src-pages-projects-3-d-scanning-for-architects-post-mdx\":[],\"component---src-pages-projects-generative-prints-post-mdx\":[\"/component---src-pages-projects-generative-prints-post-mdx-05a56cb52a1d5ceb54ca.js\"],\"component---src-pages-projects-pixel-painter-post-mdx\":[\"/component---src-pages-projects-pixel-painter-post-mdx-6026ffdb6017b05dd18f.js\"],\"component---src-pages-projects-quicksettings-iterator-post-mdx\":[],\"component---src-pages-projects-sketchbook-post-mdx\":[],\"component---src-pages-projects-thesis-post-mdx\":[]}";
           </script>
-        <script>window.___webpackCompilationHash="7754a0abbf2891027888";</script><script src="/webpack-runtime-9bde4c89ca177ceca466.js" async></script><script src="/framework-e817803d957448322269.js" async></script><script src="/app-57f378e2754e2bba7496.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="3b8f991dbc6b0db4a213";</script><script src="/webpack-runtime-3fbb62feb76b677d68cd.js" async></script><script src="/framework-e817803d957448322269.js" async></script><script src="/app-57f378e2754e2bba7496.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
