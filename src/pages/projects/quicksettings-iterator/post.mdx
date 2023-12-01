@@ -38,24 +38,18 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
                 <Caption>200</Caption>
             </HalfWidth>
         </FlexContainer>
+        <Caption>The same sketch with different values for the "Disturbance" parameter.</Caption>
     </HalfWidth>
 </FlexContainer>
 <FlexContainer>
     <ThirdWidth>
         To add a simple UI to adjust parameters, I use [quicksettings](https://github.com/bit101/quicksettings) by bit101.
         However, this requires manual work to see all the possibilities.
-    </ThirdWidth>
-    <HalfWidth>
-        `video: ./vanilla-quicksettings.mp4`
-    </HalfWidth>
-</FlexContainer>
-<FlexContainer>
-    <ThirdWidth>
+
         **What if there were an automatic way to visualize the entirety of a sketch’s parameter space?**
     </ThirdWidth>
     <HalfWidth>
-        ![disturbance-200](./lieberman-tweet.png)
-        <Caption>This question has been raised by other generative artists.</Caption>
+        `video: ./vanilla-quicksettings.mp4`
     </HalfWidth>
 </FlexContainer>
 
@@ -74,7 +68,7 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 #### Iteration Modes
 <FlexContainer>
     <ThirdWidth>
-        *Hierarchical*
+        **Hierarchical:** The parameters are arranged in a hierarchical order, and the lower parameters must iterate through all values before a higher parameter's value is changed.
     </ThirdWidth>
     <HalfWidth>
         <ThirdWidth>
@@ -90,7 +84,7 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 
 <FlexContainer>
     <ThirdWidth>
-        *Sequential*
+        **Sequential:** Each parameter is updated independently, with all values presented for a single parameter before moving on to the next parameter.
     </ThirdWidth>
     <HalfWidth>
         <ThirdWidth>
@@ -106,7 +100,7 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 
 <FlexContainer>
     <ThirdWidth>
-        *Random*
+        **Random:** Random Values are chosen for each parameter on every iteration.
     </ThirdWidth>
     <HalfWidth>
         <ThirdWidth>
