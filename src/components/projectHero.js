@@ -15,7 +15,7 @@ import {
 } from './projectHero.module.scss'
 import ClassicWindow from './classicWindow'
 import PixelPainter from '../images/pixel_painter.mp4'
-import QuickSettings from '../pages/projects/quicksettings-iterator/hierarchical.mp4'
+import QuickSettings from '../pages/projects/quicksettings-iterator/hero-video.mp4'
 import GenLino from '../pages/projects/generative-prints/hero-vid.mp4'
 
 const videoMap = {
