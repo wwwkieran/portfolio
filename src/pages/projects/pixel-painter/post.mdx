@@ -20,7 +20,21 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
     <ThirdWidth>
        Imagine a pen held in a fixed position with a paper moved under it. The pen can be raised and lowered independently of paper movement. This simple idea was the basis for this digital exploration.
     </ThirdWidth>
-    <HalfWidth>
-        video of pen with moving paper.
-    </HalfWidth>
+    <ThirdWidth>
+        `video: ./inspo.mp4`
+    </ThirdWidth>
+</FlexContainer>
+
+#### Initial Approach
+<FlexContainer>
+    <ThirdWidth>
+        I set out to build a system where each subsequent frame is calculated based on the previous frame. Instead of
+        defining all the geometry in the work at once, we only need to define the change: whether the image is moved up,
+        down, left, or right. This can be passed into the shader as boolean inputs, so that we can determine a pixel's
+        value for the frame by looking at the pixels around it. For example, if up is true, then the value for pixel x,y
+        in the current frame would be the value for pixel x,y-1 in the previous frame.
+    </ThirdWidth>
+    <ThirdWidth>
+        diagram
+    </ThirdWidth>
 </FlexContainer>
