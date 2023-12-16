@@ -48,31 +48,117 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 ##### Kernels
 (Both shape and color)
 ##### Speed
-
+<TwoThirdsWidth>
+    Movement speed can be changed by changing how many pixels we move each frame.
+</TwoThirdsWidth>
+<TwoThirdsWidth>
+    <FlexContainer>
+        <CustomWidth width={"30%"}>
+            `video: ./speed-1.mp4`
+            <Caption>1px/frame</Caption>
+        </CustomWidth>
+        <CustomWidth width={"30%"}>
+            `video: ./speed-5.mp4`
+            <Caption>5px/frame</Caption>
+        </CustomWidth>
+        <CustomWidth width={"30%"}>
+            `video: ./speed-10.mp4`
+            <Caption>10px/frame</Caption>
+        </CustomWidth>
+    </FlexContainer>
+</TwoThirdsWidth>
 ##### Pen up/down
-
-##### Invert
-
+<FlexContainer>
+    <ThirdWidth>
+        The pen can be raised and lowered so that we can navigate the canvas without drawing on it.
+    </ThirdWidth>
+    <CustomWidth width={"25%"}>
+        `video: ./pentoggle.mp4`
+    </CustomWidth>
+</FlexContainer>
+##### Color Inversion
+<FlexContainer>
+    <ThirdWidth>
+        All colors on the canvas can be inverted while leaving the kernel unchanged.
+    </ThirdWidth>
+    <CustomWidth width={"25%"}>
+        `video: ./invert.mp4`
+    </CustomWidth>
+</FlexContainer>
 
 #### Manual Mode
 <FlexContainer>
-    <CustomWidth width={"20%"}>
+    <HalfWidth>
+        For initial experimentation, I wired up each fo the features to keys on the keyboard to create a manual mode for artwork creation.
+
+        The experience of creating an artwork in manual mode is across between playing an instrument and playing a video game.
+        A combination a timing, dexterity, and technical mastery is necessary to execute an exciting artwork.
+        <br/>
+        <FlexContainer>
+            <CustomWidth width={"65%"}>
+                `video: ./manual_artwork_min.mp4`
+            </CustomWidth>
+        </FlexContainer>
+    </HalfWidth>
+    <CustomWidth width={"27%"}>
         `video: ./manual.mp4`
     </CustomWidth>
-    <ThirdWidth>
-        `video: ./manual_artwork_min.mp4`
-    </ThirdWidth>
-</FlexContainer>
-<FlexContainer>
-    <ThirdWidth>
-        Creating an artwork in manual mode is across between playing an instrument and playing a video game.
-    </ThirdWidth>
 </FlexContainer>
 
 #### Pixel Painter Command Language (PPCL)
 
+In PPCL, one line defines one frame of the animation.
+
+##### Directional
+<table>
+    <tr>
+        <td>`up`</td>
+        <td>Move the kernel up one pixel.</td>
+    </tr>
+    <tr>
+        <td>`down`</td>
+        <td>Move the kernel down one pixel.</td>
+    </tr>
+    <tr>
+        <td>`left`</td>
+        <td>Move the kernel left one pixel.</td>
+    </tr>
+    <tr>
+        <td>`right`</td>
+        <td>Move the kernel right one pixel.</td>
+    </tr>
+</table>
+
+Note that multiple directional commands can be combined in the same command line (for diagonal motion).
+
+##### Kernel
+`kernelSize=10` Sets the side length of the kernel.
+
+`kernelMode=solid` Sets the kernel mode.
+
+`kernelParam=2` Sets the optional param for the kernel. The effect of the optional param depends on the kernel mode.
+
+`kernelColor=0,0,0` Sets the rgb values for the kernel color.
+
+##### Misc
+`invert` Inverts all colors in the image.
+
+`togglePen` Toggles the kernel writing on the canvas.
+
+`penUp` Sets the pen to not write on the canvas.
+
+`penDown` Sets the pen to write on the canvas.
+
+
+I also created a javascript interface to initialize Pixel Painter with pre-defined PPCL commands and manual mode disabled.
+
+I also implemented a mechanism to record commands in manual mode and export the PPCL. In this way, manual mode can be used as a testing/experimentation ground to generate PPCL for use in future artworks.
+
 #### Infinite Artworks
+When Pixel Painter finishes executing a PPCL script, it restarts execution from the beginning of the script without clearing the canvas.
+As a result, we can use PPCL to create infinite artworks, so long as the PPCL script leaaves the kernel in a different position than it started.
 
 #### Using Javascript to Generate PPCL
+This can be used with tools like fxhash or more complex logic to infinite sequences with patterns that are generated parametrically.
 
 #### Demo
