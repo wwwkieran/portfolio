@@ -46,7 +46,31 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 
 #### Additional Features
 ##### Kernels
-(Both shape and color)
+<FlexContainer>
+    <ThirdWidth>
+       Kernel color and design can be changed.
+    </ThirdWidth>
+    <ThirdWidth>
+        <CustomWidth width={"83%"}>
+            `video: ./color.mp4`
+        </CustomWidth>
+        <FlexContainer>
+            <CustomWidth width={"30%"}>
+                ![square](./square.png )
+                <Caption>Square</Caption>
+            </CustomWidth>
+            <CustomWidth width={"30%"}>
+                ![dots](./dots.png )
+                <Caption>Dots</Caption>
+            </CustomWidth>
+            <CustomWidth width={"30%"}>
+                ![triangle](./triangle.png )
+                <Caption>Triangle</Caption>
+            </CustomWidth>
+        </FlexContainer>
+    </ThirdWidth>
+</FlexContainer>
+
 ##### Speed
 <TwoThirdsWidth>
     Movement speed can be changed by changing how many pixels we move each frame.
@@ -58,11 +82,11 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
             <Caption>1px/frame</Caption>
         </CustomWidth>
         <CustomWidth width={"30%"}>
-            `video: ./speed-5.mp4`
+            `video: ./speed-5-trimmed.mp4`
             <Caption>5px/frame</Caption>
         </CustomWidth>
         <CustomWidth width={"30%"}>
-            `video: ./speed-10.mp4`
+            `video: ./speed-10-trimmed.mp4`
             <Caption>10px/frame</Caption>
         </CustomWidth>
     </FlexContainer>
@@ -107,10 +131,19 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 
 #### Pixel Painter Command Language (PPCL)
 
-In PPCL, one line defines one frame of the animation.
 
-##### Directional
-<table>
+<FlexContainer>
+    <ThirdWidth>
+        In PPCL, one line defines one frame of the animation.
+    </ThirdWidth>
+    <ThirdWidth>
+        `video: ./ppcl2.mp4`
+    </ThirdWidth>
+</FlexContainer>
+
+<HalfWidth>
+    **Commands:**
+    <table>
     <tr>
         <td>`up`</td>
         <td>Move the kernel up one pixel.</td>
@@ -127,28 +160,58 @@ In PPCL, one line defines one frame of the animation.
         <td>`right`</td>
         <td>Move the kernel right one pixel.</td>
     </tr>
+    <tr>
+        <td>`kernelSize=10`</td>
+        <td> Sets the side length of the kernel.</td>
+    </tr>
+    <tr>
+        <td>`kernelMode=solid` </td>
+        <td>Sets the kernel mode.</td>
+    </tr>
+    <tr>
+        <td>`kernelParam=2` </td>
+        <td>Sets the optional param for the kernel.</td>
+    </tr>
+    <tr>
+        <td>`kernelColor=0,0,0`</td>
+        <td> Sets the rgb values for the kernel color.</td>
+    </tr>
+    <tr>
+        <td>`invert`</td>
+        <td> Inverts all colors in the image.</td>
+    </tr>
+    <tr>
+        <td>`togglePen`</td>
+        <td> Toggles the kernel writing on the canvas.</td>
+    </tr>
+    <tr>
+        <td>`penUp`</td>
+        <td> Sets the pen to not write on the canvas.</td>
+    </tr>
+    <tr>
+        <td>`penDown`</td>
+        <td> Sets the pen to write on the canvas.</td>
+    </tr>
 </table>
+    **Control Structures:**
+
+    Only two simple control structures exist in PPCL: line repetition and block repetition.
+
+    Prepend a command line with an integer N to repeat that command end times: `5 up` 5 frames of up animation.
+
+    Wrap a block in parens prepended with an integer N to repeat the block N times. Note that the parens MUST have their own lines.
+    ```
+    3 (
+    up
+    down
+    left
+    )
+    invert
+    ```
+
+</HalfWidth>
 
 Note that multiple directional commands can be combined in the same command line (for diagonal motion).
-
-##### Kernel
-`kernelSize=10` Sets the side length of the kernel.
-
-`kernelMode=solid` Sets the kernel mode.
-
-`kernelParam=2` Sets the optional param for the kernel. The effect of the optional param depends on the kernel mode.
-
-`kernelColor=0,0,0` Sets the rgb values for the kernel color.
-
-##### Misc
-`invert` Inverts all colors in the image.
-
-`togglePen` Toggles the kernel writing on the canvas.
-
-`penUp` Sets the pen to not write on the canvas.
-
-`penDown` Sets the pen to write on the canvas.
-
 
 I also created a javascript interface to initialize Pixel Painter with pre-defined PPCL commands and manual mode disabled.
 
@@ -161,4 +224,4 @@ As a result, we can use PPCL to create infinite artworks, so long as the PPCL sc
 #### Using Javascript to Generate PPCL
 This can be used with tools like fxhash or more complex logic to infinite sequences with patterns that are generated parametrically.
 
-#### Demo
+#### Interactive Demo
