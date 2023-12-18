@@ -14,6 +14,8 @@ index: 1
 hidden: true
 ---
 import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth, CustomWidth, Caption, } from '../../../components/post'
+import SystemDiagram from './system-diagram.svg'
+import ShaderDiagram from './shader-diagram.svg'
 
 #### Motivation
 <FlexContainer>
@@ -28,19 +30,34 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 #### Initial Approach
 <FlexContainer>
     <ThirdWidth>
-        I set out to build a system where each subsequent frame is calculated based on the previous frame. Instead of
-        defining all the geometry in the work at once, we only need to define the change: whether the image is moved up,
-        down, left, or right. This can be passed into the shader as boolean inputs, so that we can determine a pixel's
-        value for the frame by looking at the pixels around it. For example, if up is true, then the value for pixel x,y
+        Moving a piece of paper under a pen is analogous to translating all the pixels in a digital image. Therefore, I set out to build a system where each frame is calculated based on the previous frame and a series of user inputs.
+    </ThirdWidth>
+    <ThirdWidth>
+       <SystemDiagram/>
+    </ThirdWidth>
+</FlexContainer>
+<br/>
+<FlexContainer>
+    <ThirdWidth>
+        At the heart of this system is a GLSL shader. The shader generates a new frame by translating all the pixels from the previous frame based on the boolean input and drawing the kernel at the center. For example, if up is true, then the value for pixel x,y
         in the current frame would be the value for pixel x,y-1 in the previous frame.
     </ThirdWidth>
     <ThirdWidth>
-        diagram
+        <ShaderDiagram/>
+        <Caption>Translating the pixels in a 6x6 image down 1 pixel.</Caption>
     </ThirdWidth>
 </FlexContainer>
+<br/>
+
 <FlexContainer>
     <ThirdWidth>
-        `video: ./firstattempt.mp4`
+        For initial experimentation, I wired up the boolean shader inputs to the WASD keys on my keyboard, allowing me
+        to move around the canvas like a game of snake.
+    </ThirdWidth>
+    <ThirdWidth>
+        <CustomWidth width={"83%"}>
+            `video: ./firstattempt.mp4`
+        </CustomWidth>
     </ThirdWidth>
 </FlexContainer>
 
@@ -134,94 +151,130 @@ import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth
 
 <FlexContainer>
     <ThirdWidth>
+        I found that it could be difficult to create sophisticated artworks in manual mode, so I developed a simple
+        scripting language to define pixel painter artwork.
         In PPCL, one line defines one frame of the animation.
+
+        **Commands:**
+        <table>
+            <tr>
+                <td>`up`</td>
+                <td>Move the kernel up one pixel.</td>
+            </tr>
+            <tr>
+                <td>`down`</td>
+                <td>Move the kernel down one pixel.</td>
+            </tr>
+            <tr>
+                <td>`left`</td>
+                <td>Move the kernel left one pixel.</td>
+            </tr>
+            <tr>
+                <td>`right`</td>
+                <td>Move the kernel right one pixel.</td>
+            </tr>
+            <tr>
+                <td>`kernelSize=10`</td>
+                <td> Sets the side length of the kernel.</td>
+            </tr>
+            <tr>
+                <td>`kernelMode=solid` </td>
+                <td>Sets the kernel mode.</td>
+            </tr>
+            <tr>
+                <td>`kernelParam=2` </td>
+                <td>Sets the optional param for the kernel.</td>
+            </tr>
+            <tr>
+                <td>`kernelColor=0,0,0`</td>
+                <td> Sets the rgb values for the kernel color.</td>
+            </tr>
+            <tr>
+                <td>`invert`</td>
+                <td> Inverts all colors in the image.</td>
+            </tr>
+            <tr>
+                <td>`togglePen`</td>
+                <td> Toggles the kernel writing on the canvas.</td>
+            </tr>
+            <tr>
+                <td>`penUp`</td>
+                <td> Sets the pen to not write on the canvas.</td>
+            </tr>
+            <tr>
+                <td>`penDown`</td>
+                <td> Sets the pen to write on the canvas.</td>
+            </tr>
+        </table>
+        **Control Structures:**
+
+        Only two simple control structures exist in PPCL: line repetition and block repetition.
+
+        Prepend a command line with an integer N to repeat that command N times.
+
+        Wrap a block in parens prepended with an integer N to repeat the block N times. Note that the parens MUST have their own lines.
+
     </ThirdWidth>
-    <ThirdWidth>
+    <ThirdWidth centerVertically={false}>
         `video: ./ppcl2.mp4`
     </ThirdWidth>
 </FlexContainer>
+<FlexContainer>
+    <ThirdWidth>
+        **Example:**
+        ```
+        5 (
+        frameMultiplier=2
+        penDown
+        50 right up
+        50 left up
+        50 left down
+        50 right down
+        invert penUp
+        frameMultiplier=5
+        20 down
+        )
+        20 left
+        ```
+        This PPCL code draws a simple repeating diamond pattern.
 
-<HalfWidth>
-    **Commands:**
-    <table>
-    <tr>
-        <td>`up`</td>
-        <td>Move the kernel up one pixel.</td>
-    </tr>
-    <tr>
-        <td>`down`</td>
-        <td>Move the kernel down one pixel.</td>
-    </tr>
-    <tr>
-        <td>`left`</td>
-        <td>Move the kernel left one pixel.</td>
-    </tr>
-    <tr>
-        <td>`right`</td>
-        <td>Move the kernel right one pixel.</td>
-    </tr>
-    <tr>
-        <td>`kernelSize=10`</td>
-        <td> Sets the side length of the kernel.</td>
-    </tr>
-    <tr>
-        <td>`kernelMode=solid` </td>
-        <td>Sets the kernel mode.</td>
-    </tr>
-    <tr>
-        <td>`kernelParam=2` </td>
-        <td>Sets the optional param for the kernel.</td>
-    </tr>
-    <tr>
-        <td>`kernelColor=0,0,0`</td>
-        <td> Sets the rgb values for the kernel color.</td>
-    </tr>
-    <tr>
-        <td>`invert`</td>
-        <td> Inverts all colors in the image.</td>
-    </tr>
-    <tr>
-        <td>`togglePen`</td>
-        <td> Toggles the kernel writing on the canvas.</td>
-    </tr>
-    <tr>
-        <td>`penUp`</td>
-        <td> Sets the pen to not write on the canvas.</td>
-    </tr>
-    <tr>
-        <td>`penDown`</td>
-        <td> Sets the pen to write on the canvas.</td>
-    </tr>
-</table>
-    **Control Structures:**
+        **Writing PPCL:**
 
-    Only two simple control structures exist in PPCL: line repetition and block repetition.
+        While PPCL can be written manually in a text editor, I've also implemented a mechanism to record commands from manual mode and export the PPCL. In this way, manual mode can be used as a testing/experimentation ground to generate PPCL for use in future artworks.
+    </ThirdWidth>
+    <ThirdWidth>
+        <CustomWidth width={"83%"}>
+            `video: ./ppcl_example_trimmed_min.mp4`
+        </CustomWidth>
+    </ThirdWidth>
+</FlexContainer>
 
-    Prepend a command line with an integer N to repeat that command end times: `5 up` 5 frames of up animation.
-
-    Wrap a block in parens prepended with an integer N to repeat the block N times. Note that the parens MUST have their own lines.
-    ```
-    3 (
-    up
-    down
-    left
-    )
-    invert
-    ```
-
-</HalfWidth>
-
-Note that multiple directional commands can be combined in the same command line (for diagonal motion).
-
-I also created a javascript interface to initialize Pixel Painter with pre-defined PPCL commands and manual mode disabled.
-
-I also implemented a mechanism to record commands in manual mode and export the PPCL. In this way, manual mode can be used as a testing/experimentation ground to generate PPCL for use in future artworks.
 
 #### Infinite Artworks
-When Pixel Painter finishes executing a PPCL script, it restarts execution from the beginning of the script without clearing the canvas.
-As a result, we can use PPCL to create infinite artworks, so long as the PPCL script leaaves the kernel in a different position than it started.
+<FlexContainer>
+    <ThirdWidth>
+        When Pixel Painter finishes executing a PPCL script, it restarts execution from the beginning of the script without clearing the canvas.
+        As a result, we can use PPCL to create infinite artworks that continue to animate forever, so long as the PPCL script leaves the kernel in a different position than it started and the script will not completely cover the canvas in one color.
+
+        Unlike the other artworks on this page (which are video files), the artwork to the right is embedded javascript and will continue generating indefinitely.
+    </ThirdWidth>
+    <ThirdWidth>
+        <iframe src="https://sketchbook.kieran.lol/pixel_03.html" style={{width: "25vw", height: "25vw"}}></iframe>
+    </ThirdWidth>
+</FlexContainer>
+
 
 #### Using Javascript to Generate PPCL
-This can be used with tools like fxhash or more complex logic to infinite sequences with patterns that are generated parametrically.
 
+<FlexContainer>
+    <ThirdWidth>
+        We can also use Javascript to generate complex PPCL. This also enables us to use tools like fxhash to generate pixel painter artworks parametrically.
+    </ThirdWidth>
+    <ThirdWidth>
+        video
+    </ThirdWidth>
+</FlexContainer>
 #### Interactive Demo
+<FlexContainer>
+    <iframe src="https://sketchbook.kieran.lol/pixel_painter.html" style={{width: "35vw", height: "35vw", margin: "auto"}}></iframe>
+</FlexContainer>
