@@ -11,9 +11,9 @@ info: ""
 link: ""
 tech: "GLSL, P5.js"
 index: 1
-hidden: true
+hidden: false
 ---
-import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth, CustomWidth, Caption, } from '../../../components/post'
+import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, CustomWidth, Caption, Key } from '../../../components/post'
 import SystemDiagram from './system-diagram.svg'
 import ShaderDiagram from './shader-diagram.svg'
 
@@ -62,6 +62,14 @@ import ShaderDiagram from './shader-diagram.svg'
 </FlexContainer>
 
 #### Additional Features
+<FlexContainer>
+    <ThirdWidth>
+        With the basic mechanism in place, I added additional features to enable creative art-making with Pixel Painter.
+    </ThirdWidth>
+    <ThirdWidth>
+    </ThirdWidth>
+</FlexContainer>
+
 ##### Kernels
 <FlexContainer>
     <ThirdWidth>
@@ -89,21 +97,25 @@ import ShaderDiagram from './shader-diagram.svg'
 </FlexContainer>
 
 ##### Speed
-<TwoThirdsWidth>
-    Movement speed can be changed by changing how many pixels we move each frame.
-</TwoThirdsWidth>
+<FlexContainer>
+    <ThirdWidth>
+        The speed of the animation can be changed by increasing the number of pixels we translate each frame.
+    </ThirdWidth>
+    <ThirdWidth/>
+</FlexContainer>
+<br/>
 <TwoThirdsWidth>
     <FlexContainer>
         <CustomWidth width={"30%"}>
-            `video: ./speed-1.mp4`
+            `video: ./speed-1_min.mp4`
             <Caption>1px/frame</Caption>
         </CustomWidth>
         <CustomWidth width={"30%"}>
-            `video: ./speed-5-trimmed.mp4`
+            `video: ./speed-5_min.mp4`
             <Caption>5px/frame</Caption>
         </CustomWidth>
         <CustomWidth width={"30%"}>
-            `video: ./speed-10-trimmed.mp4`
+            `video: ./speed-10_min.mp4`
             <Caption>10px/frame</Caption>
         </CustomWidth>
     </FlexContainer>
@@ -130,22 +142,23 @@ import ShaderDiagram from './shader-diagram.svg'
 #### Manual Mode
 <FlexContainer>
     <HalfWidth>
-        For initial experimentation, I wired up each fo the features to keys on the keyboard to create a manual mode for artwork creation.
-
-        The experience of creating an artwork in manual mode is across between playing an instrument and playing a video game.
-        A combination a timing, dexterity, and technical mastery is necessary to execute an exciting artwork.
         <br/>
         <FlexContainer>
             <CustomWidth width={"65%"}>
                 `video: ./manual_artwork_min.mp4`
             </CustomWidth>
         </FlexContainer>
+        For initial experimentation, I wired up each fo the features to keys on the keyboard to create a manual mode for artwork creation.
+
+        The experience of creating an artwork in manual mode is across between playing an instrument and playing a video game.
+        A combination a timing, dexterity, and technical mastery is necessary to execute an exciting artwork.
+
     </HalfWidth>
     <CustomWidth width={"27%"}>
         `video: ./manual.mp4`
     </CustomWidth>
 </FlexContainer>
-
+<br/>.
 #### Pixel Painter Command Language (PPCL)
 
 
@@ -259,7 +272,7 @@ import ShaderDiagram from './shader-diagram.svg'
         Unlike the other artworks on this page (which are video files), the artwork to the right is embedded javascript and will continue generating indefinitely.
     </ThirdWidth>
     <ThirdWidth>
-        <iframe src="https://sketchbook.kieran.lol/pixel_03.html" style={{width: "25vw", height: "25vw"}}></iframe>
+        <iframe src="https://sketchbook.kieran.lol/pixel_05.html" style={{width: "25vw", height: "25vw", margin: "auto"}}></iframe>
     </ThirdWidth>
 </FlexContainer>
 
@@ -269,12 +282,46 @@ import ShaderDiagram from './shader-diagram.svg'
 <FlexContainer>
     <ThirdWidth>
         We can also use Javascript to generate complex PPCL. This also enables us to use tools like fxhash to generate pixel painter artworks parametrically.
-    </ThirdWidth>
+
+        In the artwork to the right, I have used Javascript to generate a new color value for the kernel at each frame, enabling me to create gradients.
+</ThirdWidth>
     <ThirdWidth>
-        video
+        <CustomWidth width={"83%"}>
+            `video: ./javascript_min.mp4`
+        </CustomWidth>
     </ThirdWidth>
 </FlexContainer>
 #### Interactive Demo
 <FlexContainer>
-    <iframe src="https://sketchbook.kieran.lol/pixel_painter.html" style={{width: "35vw", height: "35vw", margin: "auto"}}></iframe>
+    <iframe src="https://sketchbook.kieran.lol/pixel_painter.html" style={{width: "45vw", height: "45vw", margin: "auto"}}></iframe>
+    <Caption>Click above to start making your own artwork with Pixel Painter. ([open in a new window](https://sketchbook.kieran.lol/pixel_painter.html))</Caption>
 </FlexContainer>
+<ThirdWidth>
+ **Commands:**
+        <table>
+    <tr>
+        <td><Key>W</Key><Key>A</Key><Key>S</Key><Key>D</Key></td>
+        <td>Move the canvas relative to the Kernel.</td>
+    </tr>
+    <tr>
+        <td><Key>ESC</Key></td>
+        <td>Open the control panel to input PPCL or change parameter values.</td>
+    </tr>
+    <tr>
+        <td><Key>E</Key></td>
+        <td>Increase animation speed.</td>
+    </tr>
+    <tr>
+        <td><Key>Q</Key></td>
+        <td>Decrease animation speed.</td>
+    </tr>
+    <tr>
+        <td><Key>R</Key></td>
+        <td> Invert canvas colors.</td>
+    </tr>
+    <tr>
+        <td><Key>F</Key></td>
+        <td>Raise/lower the pen.</td>
+    </tr>
+</table>
+</ThirdWidth>

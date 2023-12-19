@@ -14,7 +14,7 @@ import {
   heroVideo
 } from './projectHero.module.scss'
 import ClassicWindow from './classicWindow'
-import PixelPainter from '../pages/projects/pixel-painter/firstattempt.mp4'
+import PixelPainter from '../pages/projects/pixel-painter/hero_min.mp4'
 import QuickSettings from '../pages/projects/quicksettings-iterator/hero-video.mp4'
 import GenLino from '../pages/projects/generative-prints/hero-vid.mp4'
 

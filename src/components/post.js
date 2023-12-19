@@ -21,6 +21,7 @@ import {
 import ClassicWindow from './classicWindow'
 import { MDXProvider } from '@mdx-js/react'
 import { PropTypes } from 'prop-types'
+import { kbcButton } from 'keyboard-css'
 
 // eslint-disable-next-line react/prop-types
 const Post = ({ frontmatter, prev, next, children }) => {
@@ -154,6 +155,13 @@ export const Caption = ({ children }) => {
 
 Caption.propTypes = {
   children: PropTypes.node.isRequired
+}
+
+export const Key = ({ children }) => {
+    return (
+        <kbd className={ 'kbc-button' }>
+            {children}
+        </kbd>)
 }
 
 export default Post
