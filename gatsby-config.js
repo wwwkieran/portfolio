@@ -59,7 +59,27 @@ module.exports = {
               ignoreFileExtensions: ['png', 'jpg', 'jpeg', 'bmp', 'tiff']
             }
           },
-          'gatsby-plugin-react-svg'
+          'gatsby-plugin-react-svg',
+          {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+              trackingIds: [
+                "G-6EV4TH7GBN", // Google Analytics / GA
+              ],
+              // This object gets passed directly to the gtag config command
+              // This config will be shared across all trackingIds
+              gtagConfig: {
+                anonymize_ip: false,
+              },
+              // This object is used for configuration specific to this plugin
+              pluginConfig: {
+                // Puts tracking script in the head instead of the body
+                head: false,
+                // Setting this parameter is also optional
+                respectDNT: false,
+              },
+            },
+          },
         ]
       }
     }
