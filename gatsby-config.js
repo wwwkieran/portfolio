@@ -80,6 +80,18 @@ module.exports = {
               },
             },
           },
+          {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+              name: `Kieran's Portfolio`,
+              short_name: `Portfolio`,
+              start_url: `/`,
+              background_color: `#ffffff`,
+              theme_color: `#ffffff`,
+              display: `browser`,
+              icon: `src/images/favicon4.svg`,
+            },
+          },
         ]
       }
     }
