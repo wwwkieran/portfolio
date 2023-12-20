@@ -134,16 +134,39 @@ TwentyPercentWidth.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export const CustomWidth = ({ width, children }) => {
+export const CustomWidth = ({ width, verticalAlignment, horizontalAlignment, children }) => {
+    const style = {width}
+    switch (verticalAlignment) {
+        case "top":
+            style.marginTop = '0px';
+            style.marginBottom = 'auto';
+            break;
+        case "bottom":
+            style.marginTop = 'auto';
+            style.marginBottom = '0px';
+            break;
+    }
+    switch (horizontalAlignment) {
+        case "left":
+            style.marginLeft = '0px';
+            style.marginRight = 'auto';
+            break;
+        case "right":
+            style.marginLeft = 'auto';
+            style.marginRight = '0px';
+            break;
+    }
   return (
-        <div style={{ width }} className={ contentContainer }>
+        <div style={style} className={ contentContainer }>
             {children}
         </div>)
 }
 
 CustomWidth.propTypes = {
   children: PropTypes.node.isRequired,
-  width: PropTypes.node.isRequired
+  width: PropTypes.node.isRequired,
+  verticalAlignment: PropTypes.node.isOptional,
+  horizontalAlignment: PropTypes.node.isRequired,
 }
 
 export const Caption = ({ children }) => {
