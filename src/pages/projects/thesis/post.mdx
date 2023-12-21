@@ -14,6 +14,7 @@ index: 6
 ---
 import {FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth, TwentyPercentWidth, CustomWidth } from '../../../components/post'
 import OutputSizeDiagram from './output-size-vert.svg'
+import UIDiagram from './ui.svg'
 
 #### Introduction
 
@@ -110,8 +111,6 @@ that appear as if they came from the training dataset.
 
 #### Experiments
 
-
-
 ##### Output Canvas Size
 <FlexContainer>
 <CustomWidth width={"20%"} verticalAlignment={"top"}>
@@ -140,6 +139,42 @@ that appear as if they came from the training dataset.
     <CustomWidth width={"20%"}></CustomWidth>
 </FlexContainer>
 
+#### Curation
+<FlexContainer>
+    <ThirdWidth>
+        Over the course of my thesis work, I generated approximately 150,000 images. On this page, I have only presented
+        30 images. While the neural network can continue generating images indefinitely, it is up to the artist to select
+        the images that capture their artistic visions and elevate those as "art".
+
+        **Here are some of my favorite images:**
+    </ThirdWidth>
+    <ThirdWidth>
+        ![artwork](./curation/cheeto-finger.jpg "Cheeto Fingers (2019)")
+    </ThirdWidth>
+</FlexContainer>
+<br/>
+<br/>
+<FlexContainer>
+    <ThirdWidth>
+        ![artwork](./curation/imp1.jpg "The Coach Driver (2019)")
+    </ThirdWidth>
+    <ThirdWidth>
+        ![artwork](./curation/imp2.jpg "Forgotten Shadows (2019)")
+    </ThirdWidth>
+</FlexContainer>
 
 #### UI Prototype
-Coming soon.
+<FlexContainer>
+<ThirdWidth>
+    After these experiments, the value of GANs to artists was clear. However, to conduct these experiments, I had to write
+    code in Python and use the command line: barriers that make GANs inaccessible to those without tech backgrounds. Therefore,
+    I proposed a simple graphical user interface to make the technology more accessible.
+</ThirdWidth>
+<ThirdWidth>
+</ThirdWidth>
+</FlexContainer>
+<FlexContainer>
+    <TwoThirdsWidth>
+        <UIDiagram/>
+    </TwoThirdsWidth>
+</FlexContainer>
