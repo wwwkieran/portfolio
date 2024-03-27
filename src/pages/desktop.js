@@ -1,11 +1,13 @@
 import * as React from 'react'
 import Seo from '../components/seo'
 import ClassicWindow from '../components/classicWindow'
+import { NavBar } from '../components/menuBar'
 
 const DesktopPage = () => {
   return (
-     <>
-         <ClassicWindow windowTitle={'Introduction'} width={'40%'} y={'100px'}>
+      <>
+      <NavBar/>
+         <ClassicWindow windowTitle={'Introduction'} width={'40%'} x={'100px'}>
              <h1>Hi, I’m Kieran!</h1>
              <br/>
              <br/>
