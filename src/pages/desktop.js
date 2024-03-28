@@ -11,7 +11,7 @@ const DesktopPage = () => {
              <h1>Hi, I’m Kieran!</h1>
              <br/>
              <br/>
-             I’m a software engineer and digital artist based in NYC, interested in the future of digital creativity tools.
+             I’m a software engineer and digital artist interested in the future of digital creativity tools.
 
          </ClassicWindow>
      </>
