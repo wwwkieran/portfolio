@@ -28,6 +28,4 @@ MenuBar.propTypes = {
   buttons: PropTypes.node.isRequired
 }
 
-export const NavBar = () => { return (<MenuBar buttons={[['Home', '/desktop'], ['Work', '/work'], ['Blog', '/blog'], ['About', '/about'], ['Shop', '/shop']]}/>) }
-
 export default MenuBar

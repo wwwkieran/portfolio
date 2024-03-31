@@ -27,13 +27,13 @@ const ClassicWindow = ({ windowTitle, children, style, draggable, width, x, y })
     style.width = width
   }
 
-  if (x !== undefined) {
-    style.position = 'absolute'
-    style.top = x
-  }
   if (y !== undefined) {
     style.position = 'absolute'
-    style.left = y
+    style.top = y
+  }
+  if (x !== undefined) {
+    style.position = 'absolute'
+    style.left = x
   }
 
   const inner = (
@@ -59,7 +59,7 @@ const ClassicWindow = ({ windowTitle, children, style, draggable, width, x, y })
   )
 
   if (draggable) {
-    return (<Draggable handle={'#windowHeader'}>
+    return (<Draggable handle={'#windowHeader'} bounds={'parent'}>
         {inner}
       </Draggable>)
   }
