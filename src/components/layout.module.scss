@@ -2,7 +2,7 @@
 @use "transition";
 
 .container {
-  @extend .ld, .ld-blur-in;
+  //@extend .ld, .ld-blur-in;
   padding-top: 2vh;
 
   margin: auto;
