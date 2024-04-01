@@ -9,17 +9,27 @@ import {
 } from './menuBar.module.scss'
 import { Link } from 'gatsby'
 
-const MenuBar = ({ buttons }) => {
+const MenuBar = ({ loading, darkmode, buttons }) => {
+  let cl = menuBarClassic
+  if (loading) {
+    cl = menuBarLoading
+  }
+  if (darkmode) {
+    cl = menuBar
+    if (loading) {
+      cl = menuBarLoading
+    }
+  }
   return (
-      <div className={menuBarClassic}>
-          <div className={menuBarElement} style={{ fontSize: '1.1em', paddingLeft: '10px' }} onTouchStart>&#63743;</div>
+      <div className={cl}>
+          <div className={menuBarElement} style={{ fontSize: '1.1em', paddingLeft: '10px', color: 'black' }} >&#63743;</div>
           {
               buttons !== undefined && buttons.map((v) => {
-                return (<Link className={menuBarElement} to={v[1]} onTouchStart>{v[0]}</Link>)
+                return (<Link key={v[1]} className={menuBarElement} to={v[1]} >{v[0]}</Link>)
               })
           }
           <div className={menuBarSpacer}></div>
-          <div className={menuBarElement} id="time">5:33 PM</div>
+        {!darkmode && <div className={menuBarElement} id="time" style={{ color: 'black' }}>5:33 PM</div>}
       </div>
   )
 }

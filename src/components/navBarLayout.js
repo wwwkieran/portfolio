@@ -3,9 +3,9 @@ import MenuBar from './menuBar'
 import { globalContainer, pageContainer } from './navBarLayout.module.scss'
 import { AnimatePresence } from 'framer-motion'
 
-const NavBarLayout = ({ children }) => {
+const NavBarLayout = ({ children, location, loading }) => {
   return (<div className={globalContainer}>
-        <MenuBar buttons={[['Home', '/desktop'], ['Work', '/work'], ['Blog', '/blog'], ['About', '/about'], ['Shop', '/shop']]}/>
+        <MenuBar darkmode={location.pathname !== '/desktop/'} loading={loading} buttons={[['Home', '/desktop'], ['Work', '/work'], ['Blog', '/blog'], ['About', '/about'], ['Shop', '/shop']]}/>
       <div className={pageContainer}><AnimatePresence mode={'wait'}>{children}</AnimatePresence></div>
         </div>)
 }
