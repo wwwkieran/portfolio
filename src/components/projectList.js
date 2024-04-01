@@ -19,12 +19,6 @@ const ProjectList = () => {
               hidden
               hero_video 
               hero_image_alt
-              hero_image {
-                childImageSharp {
-                  gatsbyImageData(height:500 
-                  width: 500)
-                }
-              }
             }
             id
           }

@@ -43,7 +43,7 @@ const ProjectHero = ({ node }) => {
                           marginLeft: 'auto'
                         }}>
                             {node.frontmatter.hero_video && <video className={heroVideo} autoPlay={'true'} loop={'true'} preload={'auto'} muted={'true'}><source src={videoMap[node.frontmatter.hero_video]} type="video/mp4" /></video>}
-                            {node.frontmatter.hero_image && <GatsbyImage alt={node.frontmatter.hero_image_alt} image={getImage(node.frontmatter.hero_image)} />}
+                            {/* {node.frontmatter.hero_image && <GatsbyImage alt={node.frontmatter.hero_image_alt} image={getImage(node.frontmatter.hero_image)} />} */}
                         </ClassicWindow>
             {/* <div style={{ display: 'flex' }}> */}
             {/*    <div style={{ width: "100%" }}></div> */}
