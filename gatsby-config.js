@@ -20,7 +20,8 @@ module.exports = {
       options: {
         fonts: [
           'victor mono',
-          'Noto Serif Display:200'
+          'Noto Serif Display:200',
+          'Cormorant Garamond'
         ],
         display: 'swap'
       }
