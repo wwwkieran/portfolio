@@ -29,13 +29,25 @@ const MenuBar = ({ loading, darkmode, buttons }) => {
               })
           }
           <div className={menuBarSpacer}></div>
-        {!darkmode && <div className={menuBarElement} id="time" style={{ color: 'black' }}>5:33 PM</div>}
+        {!darkmode && <div className={menuBarElement} id="time" style={{ color: 'black' }}><Time/></div>}
       </div>
   )
 }
 
 MenuBar.propTypes = {
   buttons: PropTypes.node.isRequired
+}
+
+const Time = () =>{
+  let time  = new Date().toLocaleTimeString()
+
+  const [ctime,setTime] = React.useState(time)
+  const UpdateTime=()=>{
+    time =  new Date().toLocaleTimeString('en-US', {hour: "numeric", minute: "2-digit", hour12: true})
+    setTime(time)
+  }
+  setInterval(UpdateTime)
+  return <>{ctime}</>
 }
 
 export default MenuBar
