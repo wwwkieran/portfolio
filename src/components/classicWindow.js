@@ -9,7 +9,8 @@ import {
   windowContent,
   minimizeButtonInternalOne,
   minimizeButtonInternalTwo,
-  resizeButtonInternal
+  resizeButtonInternal,
+  windowHeaderIcon
 } from './classicWindow.module.scss'
 import { PropTypes } from 'prop-types'
 import Draggable from 'react-draggable'
@@ -41,6 +42,7 @@ const ClassicWindow = ({ windowTitle, children, style, draggable, width, x, y })
           <div className={windowHeader} id="windowHeader">
               <button className={windowHeaderButton} id="closeButton" ></button>
               <div className={windowHeaderSpacer}></div>
+              <img className={windowHeaderIcon} src="/images/folder.png"/>
               <p className={windowHeaderText}>{windowTitle}</p>
               <div className={windowHeaderSpacer}></div>
               <button className={windowHeaderButton} id="resizeButton" >

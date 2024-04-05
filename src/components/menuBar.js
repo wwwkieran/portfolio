@@ -38,12 +38,12 @@ MenuBar.propTypes = {
   buttons: PropTypes.node.isRequired
 }
 
-const Time = () =>{
-  let time  = new Date().toLocaleTimeString()
+const Time = () => {
+  let time = new Date().toLocaleTimeString()
 
-  const [ctime,setTime] = React.useState(time)
-  const UpdateTime=()=>{
-    time =  new Date().toLocaleTimeString('en-US', {hour: "numeric", minute: "2-digit", hour12: true})
+  const [ctime, setTime] = React.useState(time)
+  const UpdateTime = () => {
+    time = new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })
     setTime(time)
   }
   setInterval(UpdateTime)
