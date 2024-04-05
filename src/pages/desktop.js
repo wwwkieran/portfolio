@@ -2,6 +2,7 @@ import * as React from 'react'
 import Seo from '../components/seo'
 import ClassicWindow from '../components/classicWindow'
 import { motion } from 'framer-motion'
+import IconLink from '../components/desktop/iconLink'
 
 const DesktopPage = () => {
   return (
@@ -9,6 +10,8 @@ const DesktopPage = () => {
          <ClassicWindow windowTitle={'Introduction'} width={'400px'} y={'100px'} x={'100px'}>
              <h1>Hi, I’m Kieran!</h1>
              <br/>
+           <IconLink link='https://google.com' description={'yeet'} imagePath={'/images/cd.png'}/>
+           <IconLink link='/work' description={'Projects'} imagePath={'/images/book.png'}/>
              <br/>
              I’m a software engineer and digital artist interested in the future of digital creativity tools.
 
