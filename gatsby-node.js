@@ -19,8 +19,15 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   `)
   data.allMdx.nodes.forEach((node, index) => {
+    let pathPrepend = ''
+    if (node.internal.contentFilePath.includes('/projects/')) {
+      pathPrepend = 'work/'
+    }
+    if (node.internal.contentFilePath.includes('/blog/')) {
+      pathPrepend = 'blog/'
+    }
     actions.createPage({
-      path: node.frontmatter.slug,
+      path: pathPrepend + node.frontmatter.slug,
       component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.id,

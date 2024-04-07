@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'standard',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
+    'plugin:mdx/recommended'
   ],
   overrides: [
     {
@@ -30,5 +31,9 @@ module.exports = {
   ],
   rules: {
     'import-newlines/enforce': 'error'
+  },
+  settings: {
+    'mdx/code-blocks': true,
+    'mdx/language-mapper': {}
   }
 }
