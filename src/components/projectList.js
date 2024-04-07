@@ -1,16 +1,20 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { project, projectSelected, container, list, heroContainer } from './projectList.module.scss'
-import { useAutoAnimate } from '@formkit/auto-animate/react'
+import {
+  project,
+  projectSelected,
+  container,
+  list,
+  heroContainer
+} from './projectList.module.scss'
 import ProjectHero from './projectHero'
-
 
 const ProjectList = () => {
   const data = useStaticQuery(graphql`
-      query {
-      allMdx (sort: { frontmatter: { index: ASC }}) {
-          nodes {
-            frontmatter {
+        query {
+  allMdx(filter: {internal: {contentFilePath: {regex: "/projects/"}}}) {
+    nodes {
+      frontmatter {
               date
               title
               slug
@@ -19,11 +23,14 @@ const ProjectList = () => {
               hidden
               hero_video 
               hero_image_alt
-            }
-            id
-          }
-        }
       }
+      internal {
+        contentFilePath
+      }
+      id
+    }
+  }
+}
     `)
   const [selectedProject, setSelectedProject] = React.useState('')
   // const [parent, enableAnimations] = useAutoAnimate(/* optional config */)
@@ -34,8 +41,9 @@ const ProjectList = () => {
       }}>
         <div className={list}>{
                 data.allMdx.nodes.map(node => (
-                    node.frontmatter.hidden ? null :
-                        <Link to={`/work/${node.frontmatter.slug}`} style={{textDecoration: "none"}} onMouseEnter={() => { setSelectedProject(node.id) } } >
+                  node.frontmatter.hidden
+                    ? null
+                    : <Link to={`/work/${node.frontmatter.slug}`} style={{ textDecoration: 'none' }} onMouseEnter={() => { setSelectedProject(node.id) } } >
                         <article className={node.id === selectedProject ? projectSelected : project}>
                             <h6>
                                 {node.frontmatter.index}

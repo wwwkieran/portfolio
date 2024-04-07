@@ -56,6 +56,7 @@
 }
 
 .windowHeaderText {
+  color: black;
   font-family: Charcoal, Geneva, sans-serif;
   font-size: 1em;
   -webkit-font-smoothing: none;
@@ -77,6 +78,7 @@
 
 .windowContent {
   background: white;
+  color: black;
   //width: 350px;
   max-height: 90vh;
   height: auto;

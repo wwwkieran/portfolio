@@ -10,12 +10,12 @@ const DesktopPage = () => {
          <ClassicWindow windowTitle={'Introduction'} width={'400px'} y={'100px'} x={'100px'}>
              <div style={{ margin: '20px' }}>
 
-             <h2 style={{ marginTop: '0px', marginBottom: '0px', fontFamily: 'Charcoal, Geneva, sans-serif' }}>Hi, I’m Kieran!</h2>
-             <p style={{ fontFamily: 'Charcoal, Geneva, sans-serif' }}>I’m a software engineer and digital artist interested in the future of digital creativity tools.</p>
+             <h2 style={{ marginTop: '0px', marginBottom: '0px', fontFamily: 'Charcoal, Geneva, sans-serif', color: 'black' }}>Hi, I’m Kieran!</h2>
+             <p style={{ fontFamily: 'Charcoal, Geneva, sans-serif', color: 'black' }}>I’m a software engineer and digital artist interested in the future of digital creativity tools.</p>
              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', gridAutoRows: '100px' }}>
 
              </div >
-             <p style={{ fontFamily: 'Geneva, sans-serif', fontSize: '0.9em', fontSmooth: 'never', webkitFontSmoothing: 'none' }}>Links:</p>
+             <p style={{ fontFamily: 'Geneva, sans-serif', fontSize: '0.9em', fontSmooth: 'never', webkitFontSmoothing: 'none', color: 'black' }}>Links:</p>
              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px', gridAutoRows: '70px' }}>
                  <IconLink link='/work' description={'Work'} imagePath={'/images/book.png'}/>
                  <IconLink link='https://www.instagram.com/wwwkieran' description={'Instagram'} imagePath={'/images/insta.png'}/>
