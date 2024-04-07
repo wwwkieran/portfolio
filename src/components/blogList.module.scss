@@ -1,5 +1,6 @@
 .container {
   color: white;
+  margin: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -22,7 +23,10 @@
 .link {
   color: white;
   text-decoration: underline;
-  :active {
+  -webkit-text-decoration: underline;
+  margin-left: 2px;
+  margin-right: 7px;
+  &:active {
     color:aquamarine;
   }
 
