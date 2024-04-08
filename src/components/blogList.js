@@ -29,9 +29,11 @@ const BlogList = () => {
         <div className={container}>
             <div className={yearContainer}>
                 <p className={year}> 2024 </p>
-                { data.allMdx.nodes.map(node => (
-                    <p className={posts} key={node.frontmatter.slug}> / <Link className={link} to={'/blog/' + node.frontmatter.slug}>{node.frontmatter.title}</Link></p>
+              <p className={posts}>
+                {data.allMdx.nodes.map(node => (
+                  <> / <Link className={link} to={'/blog/' + node.frontmatter.slug}>{node.frontmatter.title}</Link></>
                 ))}
+              </p>
             </div>
         </div>
   )
