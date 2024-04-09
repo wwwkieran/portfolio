@@ -26,7 +26,8 @@ const DesktopPage = () => {
              <br/>
              </div>
          </ClassicWindow>
-
+          <ClassicWindow windowTitle={'Gallery'} width={'300px'} y={'450px'} x={'250px'}>
+          </ClassicWindow>
           <motion.div style={{ backgroundColor: '#000000', position: 'absolute', top: '0px', left: '0px', right: '0px', bottom: '0px', zIndex: '1' }} animate={{ top: '100vh' }} exit={{ top: '0px' }} transition={{ ease: 'easeInOut', duration: 0.7 }}>
           </motion.div>
       </div>

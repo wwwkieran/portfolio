@@ -17,7 +17,12 @@ const WorkList = ({ title, image, year }) => {
               short_description
               hidden
               hero_video
-              hero_image 
+              hero_image {
+                childImageSharp {
+                  gatsbyImageData(height:500 
+                  width: 500)
+                }
+              } 
               hero_image_alt
       }
       internal {
