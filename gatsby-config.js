@@ -4,7 +4,11 @@
 module.exports = {
   siteMetadata: {
     title: 'wwwkieran',
-    siteUrl: 'https://parikh.ca'
+    siteUrl: 'https://parikh.ca',
+    instagramUrl: 'https://instagram.com/wwwkieran',
+    githubUrl: 'https://github.com/wwwkieran',
+    linkedinUrl: 'https://www.linkedin.com/in/kieranparikh/',
+    tiktokUrl: 'https://www.tiktok.com/@wwwkieran'
   },
   plugins: ['gatsby-plugin-sass', 'gatsby-plugin-image', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp',
     {
