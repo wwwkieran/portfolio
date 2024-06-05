@@ -1,11 +1,28 @@
+.menuBarInnerContainer {
+  font-family: Charcoal, Geneva, sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  font-size: 1em;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  margin-block-start: 0.8em;
+  margin-block-end: 0.8em;
+  height: 1px;
+}
+
 .menuBar {
   height: 21px;
   width: 100%;
-  display: block;
   position: relative;
   top: 2px;
   left: 0;
-  font-family: Charcoal, Geneva, sans-serif;
+
   border-radius: 10px 10px 0% 0%;
   display: flex;
   flex-direction: row;

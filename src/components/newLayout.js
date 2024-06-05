@@ -7,9 +7,11 @@ import {
   headerContainer,
   contentContainer
 } from './newLayout.module.scss'
+import { determineMaxWidth } from './hooks/determineMaxWidth'
 
 const NewLayout = ({ title, children }) => {
-  return (<motion.div className={container} initial={{ opacity: 0, translateX: -3 }} animate={{ opacity: 1, translateX: 0 }} exit={{ opacity: 0, translateX: 3 }} transition={{ duration: 0.3 }}>
+  const width = determineMaxWidth()
+  return (<motion.div className={container} initial={{ opacity: 0, translateX: -3, width }} animate={{ opacity: 1, translateX: 0 }} exit={{ opacity: 0, translateX: 3 }} transition={{ duration: 0.3 }}>
             <div className={headerContainer} style={{ display: 'inline' }}>
                 <hr className={line}/>
                 <h1 style={{ color: 'white' }} className={titleClass}>{title}</h1>
