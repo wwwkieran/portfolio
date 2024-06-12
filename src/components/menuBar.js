@@ -3,10 +3,10 @@ import { PropTypes } from 'prop-types'
 import {
   menuBar,
   menuBarClassic,
-  menuBarElement,
+  menuBarElementClassic,
   menuBarSpacer,
   menuBarInnerContainer,
-  line
+  menuBarElementMinimal
 } from './menuBar.module.scss'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
@@ -15,25 +15,26 @@ import { determineMaxWidth } from './hooks/determineMaxWidth'
 const MenuBar = ({ darkmode, buttons }) => {
   const maxWidth = determineMaxWidth()
   let cl = menuBarClassic
+  let ElementClass = menuBarElementClassic
   if (darkmode) {
     cl = menuBar
+    ElementClass = menuBarElementMinimal
   }
   return (
       <motion.div className={cl} animate={darkmode ? { height: '80px' } : {}} transition={{ duration: 0.5 }}>
-        <motion.div animate={darkmode ? { maxWidth, marginLeft: 'auto', marginRight: 'auto', width: '90%' } : { width: '100%', maxWidth: '', marginLeft: '', marginRight: '' }}>
-           { darkmode && <hr className={line}/> }
-          <motion.div className={menuBarInnerContainer} initial={{ fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em' }} animate={darkmode ? { fontFamily: 'Arial', fontSize: '2em' } : { fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em' }} transition={{ duration: 0.3 }}>
-            {!darkmode && <div className={menuBarElement} style={{ fontSize: '1.1em', paddingLeft: '10px', color: 'black' }} >&#63743;</div> }
+        <motion.div animate={darkmode ? { maxWidth, marginLeft: 'auto', marginRight: 'auto', width: '90%', borderTop: '1px solid white', borderBottom: '1px solid white', borderLeft: '0', borderRight: '0', borderColor: 'white' } : { width: '100%', maxWidth: '', marginLeft: '', marginRight: '' }}>
+           {/* { darkmode && <hr className={line}/> } */}
+          <motion.div className={menuBarInnerContainer} initial={{ fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em' }} animate={darkmode ? { fontFamily: 'Arial', fontSize: '1.7em', textTransform: 'uppercase', fontWeight: 600 } : { fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em', textTransform: 'capitalize' }} transition={{ duration: 0.3 }}>
+            {!darkmode && <div className={ElementClass} style={{ fontSize: '1.1em', paddingLeft: '10px', color: 'black' }} >&#63743;</div> }
               {
                   buttons !== undefined && buttons.map((v) => {
-                    return (<Link key={v[1]} className={menuBarElement} to={v[1]} >{v[0]}</Link>)
+                    return (<Link key={v[1]} className={ElementClass} to={v[1]} >{v[0]}</Link>)
                   })
               }
             <div className={menuBarSpacer}></div>
-            {!darkmode && <div className={menuBarElement} id="time" style={{ color: 'black' }}><Time/></div>}
-            {darkmode && <div className={menuBarElement} id="time" >wwwkieran</div>}
+            {!darkmode && <div className={ElementClass} id="time" style={{ color: 'black' }}><Time/></div>}
+            {darkmode && <div className={ElementClass} id="time" >wwwkieran</div>}
           </motion.div>
-            { darkmode && <hr className={line}/> }
         </motion.div>
       </motion.div>
   )

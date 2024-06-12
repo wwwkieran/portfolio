@@ -10,8 +10,10 @@
 
 .line {
   width: 100%;
-  height: 1px;
   margin: 0;
+  border-top-width: 1px;
+  fill: white;
+  color: white;
 }
 
 .menuBar {
@@ -70,7 +72,7 @@
   }
 }
 
-.menuBarElement {
+.menuBarElementClassic {
   all: unset;
   vertical-align: top;
   display: inline;
@@ -84,7 +86,7 @@
   -webkit-font-smoothing: none;
   font-smooth: never;
   flex-shrink: 0;
-  cursor: default;
+  cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -93,9 +95,42 @@
   user-select: none;
 }
 
-.menuBarElement:active {
+.menuBarElementMinimal {
+  all: unset;
+  vertical-align: top;
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  font-size: 1em;
+  letter-spacing: .04rem;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+  flex-shrink: 0;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.menuBarElementClassic:active {
   background: #333399;
   color: white;
+}
+
+.menuBarElementMinimal:active {
+  color: aquamarine;
+}
+
+.menuBarElementMinimal:hover {
+  color: #62c3a2;
+  &:active {
+    color: aquamarine;
+  }
 }
 
 .menuBarSpacer {
