@@ -2,16 +2,17 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import Post from '../components/post'
+import { Article } from '../components/article'
+import NewLayout from '../components/newLayout'
 
 const BlogPost = ({ data, pageContext, children }) => {
   return (
-        <Layout pageTitle={data.mdx.frontmatter.title}>
-            <Post frontmatter={data.mdx.frontmatter} prev={ pageContext.prev} next ={ pageContext.next }>
+        <NewLayout title={data.mdx.frontmatter.title}>
+            <Article frontmatter={data.mdx.frontmatter} prev={ pageContext.prev} next ={ pageContext.next }>
                 {children}
-            </Post>
+            </Article>
 
-        </Layout>
+        </NewLayout>
   )
 }
 
