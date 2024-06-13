@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: minmax(auto, 210px) minmax( 400px, auto)  minmax(auto, 210px);
-  gap: 100px;
+  gap: 90px;
   grid-template-rows: auto;
   color: white;
   margin-top: 80px;
@@ -47,6 +47,21 @@ hr {
   position: -webkit-sticky;
   align-self: start;
   top: 105px;
+  & > h6 {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: center;
+  }
+  & > h5 {
+    font-size: 0.8rem;
+    margin: 0px;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+}
+
+.contents {
   & > h6 {
     font-size: 0.7rem;
     margin-bottom: 5px;
