@@ -21,10 +21,10 @@ const MenuBar = ({ darkmode, buttons }) => {
     ElementClass = menuBarElementMinimal
   }
   return (
-      <motion.div className={cl} animate={darkmode ? { height: '80px' } : {}} transition={{ duration: 0.5 }}>
-        <motion.div animate={darkmode ? { maxWidth, marginLeft: 'auto', marginRight: 'auto', width: '90%', borderTop: '1px solid white', borderBottom: '1px solid white', borderLeft: '0', borderRight: '0', borderColor: 'white' } : { width: '100%', maxWidth: '', marginLeft: '', marginRight: '' }}>
-           {/* { darkmode && <hr className={line}/> } */}
-          <motion.div className={menuBarInnerContainer} initial={{ fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em' }} animate={darkmode ? { fontFamily: 'Arial', fontSize: '1.7em', textTransform: 'uppercase', fontWeight: 600 } : { fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em', textTransform: 'capitalize' }} transition={{ duration: 0.3 }}>
+      <motion.div className={cl} animate={darkmode ? { height: '100px' } : {}} transition={{ duration: 0.5 }}>
+        <motion.div animate={darkmode ? { maxWidth, marginLeft: 'auto', marginRight: 'auto', width: '90%' } : { width: '100%', maxWidth: '', marginLeft: '', marginRight: '' }}>
+            {/* { darkmode && <hr/> } */}
+          <motion.div className={menuBarInnerContainer} initial={{ fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em' }} animate={darkmode ? { fontFamily: 'Arial', fontSize: '1.0em', textTransform: 'uppercase', fontWeight: 500 } : { fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em', textTransform: 'capitalize' }} transition={{ duration: 0.3 }}>
             {!darkmode && <div className={ElementClass} style={{ fontSize: '1.1em', paddingLeft: '10px', color: 'black' }} >&#63743;</div> }
               {
                   buttons !== undefined && buttons.map((v) => {
@@ -35,6 +35,7 @@ const MenuBar = ({ darkmode, buttons }) => {
             {!darkmode && <div className={ElementClass} id="time" style={{ color: 'black' }}><Time/></div>}
             {darkmode && <div className={ElementClass} id="time" >wwwkieran</div>}
           </motion.div>
+          { darkmode && <hr/> }
         </motion.div>
       </motion.div>
   )

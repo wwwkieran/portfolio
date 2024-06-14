@@ -4,12 +4,58 @@
 
 .imageClass {
   object-fit: cover;
-  width: 100%;
-  height: 90%;
-
+  aspect-ratio: 3/2;
+  width: auto;
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr;
+  gap: 25px;
   width: 100%;
-  height: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: fit-content;
+}
+
+.imgCol {
+
+}
+
+.mainDescCol {
+  & > h3 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  & > p {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    padding: 0;
+    font-size: 1.0rem;
+    line-height: 1.3;
+    letter-spacing: 0em;
+    font-weight: 400;
+  }
+}
+
+.infoCol {
+  & > h6 {
+    margin-top: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+}
+
+.link {
+  all: unset;
+  text-decoration: underline;
+  &:active {
+    color: aquamarine;
+  }
 }

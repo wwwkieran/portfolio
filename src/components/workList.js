@@ -14,7 +14,7 @@ const WorkList = ({ title, image, year }) => {
               title
               slug
               index
-              short_description
+              long_description
               hidden
               hero_video
               hero_image {
@@ -36,7 +36,7 @@ const WorkList = ({ title, image, year }) => {
   return (
     <div className={container}>
       {data.allMdx.nodes.map(node => (
-        <Link className={link} to={'/work/' + node.frontmatter.slug}><ProjectThumb year={2024} title={node.frontmatter.title} image={node.frontmatter.hero_image}/></Link>
+        <ProjectThumb year={2024} description={node.frontmatter.long_description} slug={node.frontmatter.slug} title={node.frontmatter.title} image={node.frontmatter.hero_image}/>
       ))}
     </div>
   )
