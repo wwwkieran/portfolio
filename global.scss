@@ -2,6 +2,14 @@ $content-max-width: 85vw;
 $content-min-width: 0px;
 $accent-color: #391eda;
 
+:root {
+  --backgroundColor: #000000;
+  --textColorHighContrast: #ffffff;
+  --textColorMediumContrast: #c0c0c0;
+  --textColorLowContrast: #777777;
+
+}
+
 @font-face {
   font-family: "Charcoal";
   src: url('/fonts/CHARCOAL.TTF') format('truetype');
@@ -52,7 +60,7 @@ h5 {
 }
 
 h6 {
-  color: #ffffff;
+  color: var(--textColorLowContrast);
   unset: all;
   font-family: Victor Mono, PT Mono, monospace;
   font-weight: lighter;
@@ -64,7 +72,7 @@ h6 {
 
 p {
   font-weight: 400;
-  color: #ffffff;
+  color: var(--textColorMediumContrastContrast);
   font-family: "Helvetica Neue";
   line-height: 1.4;
 }
@@ -242,6 +250,9 @@ body {
   background-color: black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 
 

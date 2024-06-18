@@ -21,10 +21,10 @@ const MenuBar = ({ darkmode, buttons }) => {
     ElementClass = menuBarElementMinimal
   }
   return (
-      <motion.div className={cl} animate={darkmode ? { height: '100px' } : {}} transition={{ duration: 0.5 }}>
-        <motion.div animate={darkmode ? { maxWidth, marginLeft: 'auto', marginRight: 'auto', width: '90%' } : { width: '100%', maxWidth: '', marginLeft: '', marginRight: '' }}>
-            {/* { darkmode && <hr/> } */}
-          <motion.div className={menuBarInnerContainer} initial={{ fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em' }} animate={darkmode ? { fontFamily: 'Arial', fontSize: '1.0em', textTransform: 'uppercase', fontWeight: 500 } : { fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em', textTransform: 'capitalize' }} transition={{ duration: 0.3 }}>
+      <motion.div className={cl} animate={darkmode ? { height: 45, zIndex: 2, paddingTop: 30, position: 'sticky', top: -40 } : { position: 'relative', top: 2, height: 21, paddingTop: 0 }} transition={{ duration: 0.5 }}>
+        <motion.div animate={darkmode ? { maxWidth, marginLeft: 'auto', marginRight: 'auto', width: '90%', position: 'sticky', top: 0 } : { width: '100%', maxWidth: '', marginLeft: '0', marginRight: '0', position: 'relative', top: '' }}>
+             { darkmode && <hr/> }
+          <motion.div className={menuBarInnerContainer} initial={{ fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em' }} animate={darkmode ? { fontFamily: 'Victor Mono, PT Mono, monospace', fontSize: '1.0em', textTransform: 'uppercase', fontWeight: 500 } : { fontFamily: 'Charcoal, Geneva, sans-serif', fontSize: '1em', textTransform: 'capitalize' }} transition={{ duration: 0.3 }}>
             {!darkmode && <div className={ElementClass} style={{ fontSize: '1.1em', paddingLeft: '10px', color: 'black' }} >&#63743;</div> }
               {
                   buttons !== undefined && buttons.map((v) => {
@@ -35,7 +35,7 @@ const MenuBar = ({ darkmode, buttons }) => {
             {!darkmode && <div className={ElementClass} id="time" style={{ color: 'black' }}><Time/></div>}
             {darkmode && <div className={ElementClass} id="time" >wwwkieran</div>}
           </motion.div>
-          { darkmode && <hr/> }
+          { darkmode && <hr style={{ marginBottom: 0 }}/> }
         </motion.div>
       </motion.div>
   )

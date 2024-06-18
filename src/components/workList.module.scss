@@ -1,5 +1,67 @@
-.container {
-  width: 1000px;
+.gridContainer {
+  display: grid;
+  grid-template-columns: minmax(auto, 220px) minmax(400px, auto);
+  column-gap: 90px;
+  row-gap: 30px;
+  grid-template-rows: auto;
+  color: white;
+  //margin-left: 100px;
+  margin-right: 90px;
+  margin-top: 90px;
+}
+
+.headerContainer {
+  & > h1 {
+    font-size: 4rem;
+    //text-align: center;
+    //width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  & > p {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    letter-spacing: 0em;
+    font-weight: 400;
+    text-indent: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.leftCol {
+  position: sticky;
+  position: -webkit-sticky;
+  align-self: start;
+  top: 200px;
+  & > h6 {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  & > h3 {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: right;
+  }
+
+
+}
+
+.categoryHeader {
+  & > h2 {
+    font-size: 1.7rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+}
+
+.listCol {
+  margin-top: 90px;
 }
 
 .link {

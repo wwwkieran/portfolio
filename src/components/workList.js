@@ -1,7 +1,13 @@
 import * as React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { container, link } from './workList.module.scss'
+import {
+  gridContainer,
+  leftCol,
+  listCol,
+  headerContainer,
+  categoryHeader
+} from './workList.module.scss'
 import ProjectThumb from './projectThumb'
 
 const WorkList = ({ title, image, year }) => {
@@ -14,6 +20,7 @@ const WorkList = ({ title, image, year }) => {
               title
               slug
               index
+              short_description
               long_description
               hidden
               hero_video
@@ -34,12 +41,36 @@ const WorkList = ({ title, image, year }) => {
 }
     `)
   return (
-    <div className={container}>
-      {data.allMdx.nodes.map(node => (
-        <ProjectThumb year={2024} description={node.frontmatter.long_description} slug={node.frontmatter.slug} title={node.frontmatter.title} image={node.frontmatter.hero_image}/>
-      ))}
+      <>
+
+    <div className={gridContainer}>
+        <div></div>
+        <div className={headerContainer}>
+             {/* <hr/> */}
+            <h1>Work</h1>
+             {/* <hr/> */}
+        </div>
+        <LeftColumn/>
+      <div className={listCol}>
+          <div className={categoryHeader}><h2>Artwork</h2></div>
+        {data.allMdx.nodes.map(node => (
+            <ProjectThumb year={2024} description={node.frontmatter.long_description} key={node.frontmatter.slug} slug={node.frontmatter.slug} title={node.frontmatter.title} image={node.frontmatter.hero_image}/>
+        ))}
+      </div>
     </div>
+      </>
   )
+}
+
+const LeftColumn = ({ title, image, year }) => {
+  return (
+      <div className={leftCol}>
+          <h3>Jump to category</h3>
+           <hr/>
+          <h6>Artwork</h6>
+          <h6>Tools & Applications</h6>
+          <h6>Research</h6>
+    </div>)
 }
 
 export default WorkList

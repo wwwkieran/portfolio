@@ -26,7 +26,7 @@ const ProjectThumb = ({ title, image, year, slug, description }) => {
                   <p><Link to={path} className={link}>Read more</Link></p>
               </div>
               <div className={infoCol}>
-                 <h6>{year}</h6>
+                 <h3>{year}</h3>
               </div>
           </div>
       </>
