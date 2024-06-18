@@ -9,9 +9,9 @@ import { Project } from '../components/project'
 const BlogPost = ({ data, pageContext, children }) => {
   return (
         <NewLayout title={data.mdx.frontmatter.title}>
-            <Article frontmatter={data.mdx.frontmatter} prev={ pageContext.prev} next ={ pageContext.next }>
+            <Project frontmatter={data.mdx.frontmatter} prev={ pageContext.prev} next ={ pageContext.next }>
                 {children}
-            </Article>
+            </Project>
 
         </NewLayout>
   )

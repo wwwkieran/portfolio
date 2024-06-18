@@ -8,11 +8,12 @@
 }
 
 .line {
-  width: 100%;
-  margin: 0;
-  border-top-width: 1px;
-  fill: white;
-  color: white;
+  border: 0;
+  height: 1px;
+  display: block;
+  background: var(--textColorHighContrast);
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .menuBar {

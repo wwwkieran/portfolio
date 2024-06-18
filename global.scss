@@ -5,8 +5,8 @@ $accent-color: #391eda;
 :root {
   --backgroundColor: #000000;
   --textColorHighContrast: #ffffff;
-  --textColorMediumContrast: #c0c0c0;
-  --textColorLowContrast: #777777;
+  --textColorMediumContrast: rgba(255, 255, 255, 0.75);
+  --textColorLowContrast: rgba(255, 255, 255, 0.4);
 
 }
 
