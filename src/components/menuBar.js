@@ -28,7 +28,7 @@ const MenuBar = ({ darkmode, buttons }) => {
             zIndex: 2,
             paddingTop: 0,
             position: 'sticky',
-            top: -10
+            top: -12
           }
         : { position: 'relative', top: 2, height: 21, paddingTop: 0 }} transition={{ duration: 0.5 }}>
         <motion.div animate={darkmode
@@ -53,7 +53,7 @@ const MenuBar = ({ darkmode, buttons }) => {
             {!darkmode && <div className={ElementClass} id="time" style={{ color: 'black' }}><Time/></div>}
             {darkmode && <div className={ElementClass} id="time" >wwwkieran</div>}
           </motion.div>
-            { darkmode && <motion.hr initial={{ height: 0, marginTop: 0, marginBottom: 0 }} animate={{ height: 1, marginTop: 5, marginBottom: 5 }} exit={{ height: 0, marginTop: 0, marginBottom: 0 }} className={line} /> }
+            { darkmode && <motion.hr initial={{ height: 0, marginTop: 0, marginBottom: 0 }} animate={{ height: 1, marginTop: 5, marginBottom: 0 }} exit={{ height: 0, marginTop: 0, marginBottom: 0 }} className={line} /> }
         </motion.div>
       </motion.div>
   )
