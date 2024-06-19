@@ -1,5 +1,11 @@
 import * as React from 'react'
-import { container, titleCol, backTitle, fullSpan } from './project.module.scss'
+import {
+  container,
+  titleCol,
+  backTitle,
+  fullSpan,
+  twoCol
+} from './project.module.scss'
 import { MDXProvider } from '@mdx-js/react'
 import ClassicWindow from './classicWindow'
 import { FlexContainer, HalfWidth, ThirdWidth, TwoThirdsWidth } from './post'
@@ -12,7 +18,6 @@ export const Project = ({ frontmatter, prev, next, children }) => {
   return (
         <div className={container}>
             <div className={backTitle}><h1><Link to={'/work'}>&#8592; Work</Link></h1></div>
-            <div></div>
             <div className={titleCol}><h1>{frontmatter.title}</h1></div>
             <div className={fullSpan}>
                 <br/>
@@ -30,8 +35,10 @@ export const Project = ({ frontmatter, prev, next, children }) => {
                 <br/>
                 <hr/>
             </div>
-            <h6>{frontmatter.date}</h6>
-            <h6>{frontmatter.tech}</h6>
+            <TwoCol>
+                <h6>{frontmatter.date}</h6>
+                <h6>{frontmatter.tech}</h6>
+            </TwoCol>
             <h6>{frontmatter.info}</h6>
             <div></div>
             <div></div>
@@ -50,4 +57,8 @@ export const Project = ({ frontmatter, prev, next, children }) => {
             </MDXProvider>
         </div>
   )
+}
+
+const TwoCol = ({ children }) => {
+  return (<div className={twoCol}> { children }</div>)
 }

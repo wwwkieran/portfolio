@@ -3,28 +3,10 @@
   margin-top: 10px;
   padding: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   grid-template-rows: auto;
   border: 1px solid white;
-
-  & > h6 {
-    margin: 0;
-    font-size: 0.8rem;
-    padding: 0;
-  }
-
-  & > p {
-    color: var(--textColorMediumContrast);
-    font-size: 1.3rem;
-    line-height: 1.3;
-    letter-spacing: 0em;
-    font-weight: 400;
-    margin-bottom: 0;
-    margin-top: 15px;
-    grid-column: 3 / 4;
-  }
-
 }
 
 .titleCol {
@@ -43,7 +25,7 @@
 }
 
 .fullSpan {
-  grid-column: 1 / 4;
+  grid-column: 1 / 3;
   & > hr {
     border: 0;
     height: 1px;
@@ -53,4 +35,39 @@
     margin-bottom: 5px;
   }
 
+}
+
+h2 {
+  color: var(--textColorMediumContrast);
+  margin: 0;
+  font-size: 2.5rem;
+  padding: 0;
+  grid-column: 2 / 3;
+}
+
+p {
+  color: var(--textColorMediumContrast);
+  font-size: 1.3rem;
+  line-height: 1.3;
+  letter-spacing: 0em;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 15px;
+  grid-column: 2 / 3;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  grid-template-rows: auto;
+}
+span {
+  max-width: 70%;
 }
