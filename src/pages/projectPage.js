@@ -27,6 +27,11 @@ export const query = graphql`
         info
         long_description
         link
+        hero_image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
     }
   }
