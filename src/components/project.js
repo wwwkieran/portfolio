@@ -19,15 +19,14 @@ import { useEffect, useState } from 'react'
 export const Project = ({ frontmatter, prev, next, children }) => {
   if (!frontmatter) return null
 
-  const [showScrollIndicator, setShowScrollIndicator] = useState(true)
+  const [scrollOpacity, setScrollOpacity] = useState(1)
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setShowScrollIndicator(false)
-      } else {
-        setShowScrollIndicator(true)
-      }
+      const maxScroll = 200
+      const scrollY = window.scrollY
+      const newOpacity = Math.max(0, 1 - scrollY / maxScroll)
+      setScrollOpacity(newOpacity)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -39,10 +38,10 @@ export const Project = ({ frontmatter, prev, next, children }) => {
           <div>
               <GatsbyImage alt={frontmatter.title} imgClassName={fullPageImage} className={fullPageImage}
                            image={getImage(frontmatter.hero_image)}/>
-              {showScrollIndicator && <div className={scrollDownIndicator}></div>}
+              <div className={scrollDownIndicator} style={{ opacity: scrollOpacity }}></div>
           </div>
           <div className={container}>
-          <div className={backTitle}><h1><Link to={'/work'}>&#8592; Work</Link></h1></div>
+           <div className={backTitle}><h1><Link to={'/work'}>&#8592; Work</Link></h1></div>
               <div className={titleCol}><h1>{frontmatter.title}</h1></div>
               <div className={fullSpan}>
                   <br/>
